@@ -13,33 +13,27 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '开始',
+        text: '软件部学习计划',
         items: [
           { text: '概述', link: '/start' },
-        ]
-      },
-      {
-        text: '前端学习计划',
-        items: [
-          { text: '概述', link: '/front-end-learning-plan' },
-        ]
-      },
-      {
-        text: '后端学习计划',
-        items: [
-          { text: '概述', link: '/backend-learning-plan' },
-        ]
-      },
-      {
-        text: '算法学习计划',
-        items: [
-          { text: '概述', link: '/algorithm-learning-plan' },
-        ]
-      },
-      {
-        text: '其他学习计划',
-        items: [
-          { text: '概述', link: '/other-learning-plan' },
+          {
+            text: '前端学习计划',
+            items: [
+              { text: '前端学习概述', link: '/front-end-learning-plan' },
+            ]
+          },
+          {
+            text: '后端学习计划',
+            items: [
+              { text: '后端学习概述', link: '/backend-learning-plan' },
+            ]
+          },
+          {
+            text: '算法学习计划',
+            items: [
+              { text: '算法学习概述', link: '/algorithm-learning-plan' },
+            ]
+          },
         ]
       },
     ],
