@@ -7,22 +7,45 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '主页', link: '/' },
+      { text: '学习计划', link: '/start' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '开始',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '概述', link: '/start' },
         ]
-      }
+      },
+      {
+        text: '前端学习计划',
+        items: [
+          { text: '概述', link: '/front-end-learning-plan' },
+        ]
+      },
+      {
+        text: '后端学习计划',
+        items: [
+          { text: '概述', link: '/backend-learning-plan' },
+        ]
+      },
+      {
+        text: '算法学习计划',
+        items: [
+          { text: '概述', link: '/algorithm-learning-plan' },
+        ]
+      },
+      {
+        text: '其他学习计划',
+        items: [
+          { text: '概述', link: '/other-learning-plan' },
+        ]
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://gitee.com/XAUATiOSClub/language_learning' }
     ]
   }
 })
