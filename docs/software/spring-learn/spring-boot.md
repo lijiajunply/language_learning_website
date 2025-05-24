@@ -126,7 +126,7 @@ management.endpoints.web.exposure.include=*
 
 ```
 
-然后访问 [http://localhost:8080/actuator/beans](http://localhost:8080/actuator/beans)，查看当前自动配置的 Bean。
+然后访问 `http://localhost:8080/actuator/beans`，查看当前自动配置的 Bean。
 
 ## 6.5 Spring Boot 常用注解与应用
 
