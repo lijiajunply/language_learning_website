@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "软件部新生代培养计划"
-  text: "西建大 iOS Club 软件部新生代培养计划"
+  name: "新生代培养计划"
+  text: "西建大 iOS Club 新生代培养计划"
   tagline: Return to the future.
   image:
     src: /logo.png
@@ -12,18 +12,18 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /start
+      link: /software/start
     - theme: alt
       text: 学习计划
 
 features:
   - title: 前端学习计划
     details: 快速上手前端
-    link: /front-end-learning-plan
+    link: /software/front-end-learning-plan
   - title: 后端学习计划
     details: 逐步走向后端大佬
-    link: /backend-learning-plan
+    link: /software/backend-learning-plan
   - title: 算法学习计划
     details: 拿下蓝桥杯！
-    link: /algorithm-learning-plan
+    link: /software/algorithm-learning-plan
 ---

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 后端学习概要
+title: 学习概要
 description: 系统学习C#、ASP.NET Core WebAPI、EF Core，构建现代化后端应用
 ---
 
@@ -553,7 +553,7 @@ const techStack = ref([
 </style>
 
 <div class="hero-section">
-  <h1 class="hero-title">⚡ 后端学习概要</h1>
+  <h1 class="hero-title">⚡ C# 后端学习概要</h1>
   <p class="hero-subtitle">掌握C#、ASP.NET Core WebAPI、EF Core，构建企业级后端应用</p>
 </div>
 
