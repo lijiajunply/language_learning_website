@@ -1,6 +1,6 @@
-## **综合项目：购物车功能开发**
+# **综合项目：购物车功能开发**
 
-### 目标
+## 目标
 
 1. 使用 Webpack 打包模块化代码
 
@@ -10,7 +10,7 @@
 
 1. 应用 ES6+ 特性（解构、模板字符串、箭头函数）
 
-### 1. 项目结构
+## 1. 项目结构
 
 ```
 webpack-demo/
@@ -32,9 +32,9 @@ npm init -y
 npm install webpack webpack-cli --save-dev
 ```
 
-### 2. 核心代码实现
+## 2. 核心代码实现
 
-###### 2.**1 api.js - 模拟异步请求**
+### 2.**1 api.js - 模拟异步请求**
 
 ```javascript
 // 模拟获取商品数据（使用 Promise）
@@ -51,7 +51,7 @@ export const fetchProducts = () => {
 };
 ```
 
-#### **2.2 cart.js - 购物车逻辑**
+### **2.2 cart.js - 购物车逻辑**
 
 ```javascript
 export class Cart {
@@ -86,7 +86,7 @@ export class Cart {
 }
 ```
 
-#### **2.3 index.js - 主入口**
+### **2.3 index.js - 主入口**
 
 ```javascript
 import { fetchProducts } from './api';
@@ -143,7 +143,7 @@ window.removeFromCart = (productId) => {
 renderProducts();
 ```
 
-### 3. Webpack 配**置 (webpack.config.js)**
+## 3. Webpack 配**置 (webpack.config.js)**
 
 ```javascript
 const path = require('path');
@@ -187,9 +187,9 @@ module.exports = {
 };
 ```
 
-### 4. 配套文件
+## 4. 配套文件
 
-#### **public/index.html**
+### **public/index.html**
 
 ```html
 <!DOCTYPE html>
@@ -210,7 +210,7 @@ module.exports = {
 
 运行 HTML
 
-#### **src/styles.css**
+### **src/styles.css**
 
 ```css
 .product {
@@ -229,7 +229,7 @@ button {
 }
 ```
 
-### 5. 运行流程
+## 5. 运行流程
 
 1. 安装依赖：
 
@@ -264,7 +264,7 @@ npx webpack serve
 
 1. 访问 
 
-### 6. 关键知识点验证
+## 6. 关键知识点验证
 
 1. 模块化：import/export 分割代码
 

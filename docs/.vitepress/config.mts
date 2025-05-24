@@ -50,8 +50,8 @@ export default defineConfig({
                 items: [
                   { text: '基础知识', link: '/web-basic/javascript-basics' },
                   { text: '函数与作用域', link: '/web-basic/functions-and-scope' },
-                  { text: 'DOM 操作', link: '/web-advanced/dom-manipulation' },
                   { text: 'JavaScript 进阶', link: '/web-basic/js-advanced' },
+                  { text: 'DOM 操作', link: '/web-advanced/dom-manipulation' },
                   { text: 'Web存储与Cookie', link: '/web-advanced/cookie' },
                 ],
                 collapsed: true
@@ -60,8 +60,8 @@ export default defineConfig({
                 text: '工具与技巧', 
                 items: [
                   { text: '开发工具', link: '/web-advanced/dev-tools' },
-                  { text: '调试与优化', link: '/web-advanced/debug' },
                   { text: '构建工具', link: '/web-advanced/build-tools' },
+                  { text: '调试与优化', link: '/web-advanced/debug' },
                   { text: 'Webpack 基础配置', link: '/web-advanced/webpack-basic-configuration' },
                   { text: 'Webpack 深度教学指南', link: '/web-advanced/webpack-in-depth-tutorial' },
                 ],

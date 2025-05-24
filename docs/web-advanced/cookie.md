@@ -1,6 +1,6 @@
-## **第十二章：Web 存储与 Cookie**
+# **第十二章：Web 存储与 Cookie**
 
-### **1. Web 存储概述**
+## **1. Web 存储概述**
 
 在 JavaScript 中，有 3 种主要的 Web 存储方式：
 
@@ -11,13 +11,13 @@
 | Cookie | 可设置过期时间 | 用于存储登录凭证、跨页面数据传输 | 
 
 
-### **2. localStorage（本地存储）**
+## **2. localStorage（本地存储）**
 
 - 数据存储在浏览器本地，不会随页面关闭而丢失。
 
 - 存储容量：最大 5MB，适合存储 **非敏感** 持久化数据。
 
-#### **📌 操作 localStorage**
+### **📌 操作 localStorage**
 
 ```js
 // 存储数据
@@ -38,13 +38,13 @@ localStorage.clear();
 
 - 存储前端缓存数据（如搜索历史）
 
-### **3. sessionStorage（会话存储）**
+## **3. sessionStorage（会话存储）**
 
 - 数据仅在当前页面会话中有效，页面关闭后数据清除。
 
 - 适合存储临时数据（如用户输入的表单数据）。
 
-#### **📌 操作 sessionStorage**
+### **📌 操作 sessionStorage**
 
 ```js
 // 存储数据
@@ -63,7 +63,7 @@ sessionStorage.clear();
 
 - 临时存储搜索结果、筛选条件等会话信息。
 
-### **4. Cookie（用于服务器通信）**
+## **4. Cookie（用于服务器通信）**
 
 - 数据可以在前端 & 服务器之间传输，支持设置过期时间。
 
@@ -71,7 +71,7 @@ sessionStorage.clear();
 
 - 可设置 HttpOnly，使 JavaScript 无法访问，提升安全性。
 
-#### **📌 操作 Cookie**
+### **📌 操作 Cookie**
 
 ```js
 // 设置 cookie（expires 过期时间，path 适用路径）
@@ -93,7 +93,7 @@ document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
 - 用于服务器身份认证（如 token）
 
-### **5. localStorage vs sessionStorage vs Cookie 对比**
+## **5. localStorage vs sessionStorage vs Cookie 对比**
 
 | 特性 | localStorage | sessionStorage | Cookie | 
 | -- | -- | -- | -- |

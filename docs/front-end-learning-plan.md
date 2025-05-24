@@ -499,18 +499,25 @@ const toggleProgress = (index) => {
 ## 🎯 学习模块
 
 <div class="learning-modules">
-  <div class="module-card">
-    <h3>HTML</h3>
-    <p>网页结构基础</p>
-  </div>
-  <div class="module-card">
-    <h3>CSS</h3>
-    <p>样式与布局设计</p>
-  </div>
-  <div class="module-card">
-    <h3>JavaScript</h3>
-    <p>交互逻辑编程</p>
-  </div>
+  <a href="/web-basic/html-basics.html">
+    <div class="module-card">
+      <h3>HTML</h3>
+      <p>网页结构基础</p>
+    </div>
+  </a>
+  <a href="/web-basic/css-basics.html">
+    <div class="module-card">
+      <h3>CSS</h3>
+      <p>样式与布局设计</p>
+    </div>
+  </a>
+  <a href="/web-basic/javascript-basics.html">
+    <div class="module-card">
+      <h3>JavaScript</h3>
+      <p>交互逻辑编程</p>
+    </div>
+  </a>
+
   <div class="module-card">
     <h3>Vue</h3>
     <p>基本框架学习</p>

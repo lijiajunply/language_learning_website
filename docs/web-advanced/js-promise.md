@@ -1,6 +1,6 @@
-### JavaScript 中的 Promise
+# JavaScript 中的 Promise
 
-#### 1. 什么是 Promise？
+## 1. 什么是 Promise？
 
 Promise 是 JavaScript 中用于处理异步操作的对象。它代表一个异步操作的最终完成（或失败）及其结果值。Promise 有三种状态：
 
@@ -10,7 +10,7 @@ Promise 是 JavaScript 中用于处理异步操作的对象。它代表一个异
 
 - Rejected（已拒绝）：操作失败。
 
-#### 2. 创建 Promise
+## 2. 创建 Promise
 
 Promise 通过 new Promise() 构造函数创建，接受一个执行器函数（executor），该函数有两个参数：resolve 和 reject。
 
@@ -52,7 +52,7 @@ const myPromise = new Promise((resolve, reject) => {
 
 	- reason 可以是任意类型，但通常是一个 Error 对象，以便更好地追踪错误。
 
-#### 3. 使用 Promise
+## 3. 使用 Promise
 
 Promise 对象有两个主要方法用于处理结果：
 
@@ -243,7 +243,7 @@ myPromise
 
 通过 then() 和 catch()，你可以清晰地处理 Promise 的成功和失败状态，并构建复杂的异步逻辑。
 
-#### 4. Promise 链
+## 4. Promise 链
 
 then() 方法可以链式调用，每个 then() 返回一个新的 Promise，允许进一步的异步操作。
 
@@ -261,7 +261,7 @@ myPromise
   });
 ```
 
-#### 5. Promise 的静态方法
+## 5. Promise 的静态方法
 
 - Promise.resolve(value)：返回一个已解决的 Promise。
 
@@ -290,7 +290,7 @@ Promise.race([promise1, promise2])
   });
 ```
 
-#### 6. 错误处理
+## 6. 错误处理
 
 除了 catch()，还可以在 then() 中传入第二个函数处理错误。
 
@@ -306,7 +306,7 @@ myPromise
   );
 ```
 
-#### 7. 异步函数与** async/await**
+## 7. 异步函数与** async/await**
 
 async/await 是处理 Promise 的语法糖，使异步代码看起来像同步代码。
 
@@ -323,6 +323,6 @@ async function myAsyncFunction() {
 myAsyncFunction();
 ```
 
-### 总结
+## 总结
 
 Promise 是 JavaScript 中处理异步操作的核心工具，通过 then() 和 catch() 方法处理结果，支持链式调用和错误处理。async/await 进一步简化了 Promise 的使用，使代码更易读和维护。

@@ -1,12 +1,12 @@
-## 第十七章：**Webpack 深度教学指南**
+# 第十七章：**Webpack 深度教学指南**
 
 *注意：学习本章前：请完成综合项目02：购物车功能开发*
 
 ![](images/WEBRESOURCE1611592f774474b3708087a8c2d8e266image.png)
 
-### **一、为什么需要 Webpack？**
+## **一、为什么需要 Webpack？**
 
-#### 1. 前端开发的演变
+### 1. 前端开发的演变
 
 - 原始开发模式：手动管理 HTML/CSS/JS 文件，缺乏模块化
 
@@ -16,7 +16,7 @@
 
 - 性能优化瓶颈：代码压缩、按需加载、缓存策略难以手动实现
 
-#### 2. Webpack 的核心价值
+### 2. Webpack 的核心价值
 
 - 模块化打包：将分散的模块整合为少数文件
 
@@ -26,9 +26,9 @@
 
 - 生产优化能力：Tree Shaking、代码分割、压缩
 
-### **二、核心概念**
+## **二、核心概念**
 
-#### 1. 模块（Module）
+### 1. 模块（Module）
 
 - 定义：任何文件（JS、CSS、图片等）均可视为模块
 
@@ -41,7 +41,7 @@ import styles from './styles.css'; // CSS 模块
 import logo from './logo.png';     // 图片模块
 ```
 
-#### 2. 入口（Entry）
+### 2. 入口（Entry）
 
 - 作用：指定依赖分析的起点
 
@@ -60,7 +60,7 @@ entry: {
 }
 ```
 
-#### 3. 出口（Output）
+### 3. 出口（Output）
 
 - 作用：定义打包文件的输出规则
 
@@ -75,7 +75,7 @@ output: {
 }
 ```
 
-#### 4. Loader
+### 4. Loader
 
 - 作用：处理非 JS 模块（Webpack 默认只能处理 JS）
 
@@ -100,7 +100,7 @@ graph LR
 | file-loader | 处理文件（如图片） | { test: /\.png$/, type: 'asset/resource' } | 
 
 
-#### 5. 插件（Plugin）
+### 5. 插件（Plugin）
 
 - 作用：扩展 Webpack 功能（如生成 HTML、压缩代码）
 
@@ -113,11 +113,11 @@ graph LR
 | CleanWebpackPlugin | 清理输出目录 | new CleanWebpackPlugin() | 
 
 
-#### 6. 模式（Mode）
+### 6. 模式（Mode）
 
 - 作用：内置优化策略（开发/生产环境）
 
-```
+```js
 mode: 'development', // 或 'production'
 // 等同于：
 module.exports = {
@@ -129,9 +129,9 @@ module.exports = {
 }
 ```
 
-### **三、Webpack 工作原理**
+## **三、Webpack 工作原理**
 
-#### 1. 打包流程总览
+### 1. 打包流程总览
 
 ![](images/WEBRESOURCE0a3346d833732a4631e50fa9dc9ce26aimage.png)
 
@@ -156,7 +156,7 @@ sequenceDiagram
   Chunks->>Output: 生成最终文件
 ```
 
-#### 2. 关键步骤详解
+### 2. 关键步骤详解
 
 - 模块解析（Resolution）：
 
@@ -186,11 +186,11 @@ sequenceDiagram
 
 	- 应用 Plugin 的优化逻辑（如压缩、添加 Hash）
 
-### **四、完整配置示例**
+## **四、完整配置示例**
 
-#### 1. 开发环境配置 **(webpack.dev.js)**
+### 1. 开发环境配置 **(webpack.dev.js)**
 
-```
+```js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -228,9 +228,9 @@ module.exports = {
 };
 ```
 
-#### 2. 生产环境配置 (webpack.prod.js)
+### 2. 生产环境配置 (webpack.prod.js)
 
-```
+```js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -271,9 +271,9 @@ module.exports = {
 };
 ```
 
-### **五、高级特性与优化**
+## **五、高级特性与优化**
 
-#### 1. Tree Shaking
+### 1. Tree Shaking
 
 - 条件：使用 ES6 模块语法 (import/export)，设置 mode: 'production'
 
@@ -285,7 +285,7 @@ module.exports = {
 }
 ```
 
-#### 2. 持久化缓存
+### 2. 持久化缓存
 
 - 配置文件名哈希：
 
@@ -303,7 +303,7 @@ optimization: {
 }
 ```
 
-#### 3. 懒加载（Lazy Loading）
+### 3. 懒加载（Lazy Loading）
 
 - 动态导入语法：
 
@@ -315,9 +315,9 @@ button.addEventListener('click', () => {
 });
 ```
 
-### **六、常见问题与调试**
+## **六、常见问题与调试**
 
-#### 1. 性能分析
+### 1. 性能分析
 
 - 生成统计文件：
 
@@ -331,7 +331,7 @@ npx webpack --profile --json > stats.json
 
 	- Webpack Visualizer
 
-#### 2. 调试配置
+### 2. 调试配置
 
 - 打印完整配置：
 
@@ -341,9 +341,9 @@ console.log(require('util').inspect(config, { depth: null }));
 
 - 逐步排查 Loader/Plugin：禁用插件或简化 Loader 规则定位问题
 
-### **七、延伸学习**
+## **七、延伸学习**
 
-#### 1. 自定义 Loader
+### 1. 自定义 Loader
 
 - 编写一个简单的 Loader (src/loaders/uppercase-loader.js)：
 
@@ -362,7 +362,7 @@ module.exports = function(source) {
 }
 ```
 
-#### 2. 自定义 Plugin
+### 2. 自定义 Plugin
 
 - 基本结构：
 
@@ -376,7 +376,7 @@ class MyPlugin {
 }
 ```
 
-### **八、总结**
+## **八、总结**
 
 - ✅ **核心能力**：模块打包、资源处理、代码优化
 
