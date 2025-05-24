@@ -2,12 +2,16 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "新生代培养计划",
   description: "西建大 iOS Club 新生代培养计划",
   head: [
     ['link', { rel: 'icon', sizes: '32x32', href: '/favicon.ico' }],
   ],
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
@@ -113,7 +117,29 @@ export default defineConfig({
                 {
                   text: 'Asp.Net Core WebAPI',
                   items: [
-                    { text: '概述', link: '/software/aspnetcore-learn/start' }
+                    { text: '概述', link: '/software/aspnetcore-learn/start' },
+                    {
+                      text: 'C# 基础学习',
+                      items: [],
+                      collapsed: true,
+                    },
+                    {
+                      text: 'Asp.Net Core WebAPI 学习',
+                      items: [],
+                      collapsed: true,
+                    },
+                    {
+                      text: 'EF Core 学习',
+                      items: [],
+                      collapsed: true,
+                    },
+                  ],
+                  collapsed: true
+                },
+                {
+                  text: 'Spring',
+                  items: [
+                    { text: '概述', link: '/software/spring-learn/start' }
                   ],
                   collapsed: true
                 }
