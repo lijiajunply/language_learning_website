@@ -46,29 +46,46 @@ const toggleProgress = (index) => {
 }
 
 .hero-section {
-  background: var(--hero-bg-light);
-  color: white;
+  background: linear-gradient(135deg, var(--hero-bg-start) 0%, var(--hero-bg-end) 100%);
+  color: var(--hero-text);
   padding: 3rem 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
   text-align: center;
-  transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.dark .hero-section {
-  background: var(--hero-bg-dark);
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .hero-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
   margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .resource-cards {
@@ -539,10 +556,9 @@ const toggleProgress = (index) => {
 
 ## 🏆 学习目标
 
-<div class="tips-box goal-box">
-  <h4>🎯 阶段目标</h4>
-  <p>在暑假开始前完成前端基础知识学习，为暑假期间的后端学习做好准备。掌握HTML页面结构、CSS样式设计、JavaScript交互编程三大核心技能。</p>
-</div>
+::: tip 🎯 阶段目标
+在暑假开始前完成前端基础知识学习，为暑假期间的后端学习做好准备。掌握HTML页面结构、CSS样式设计、JavaScript交互编程三大核心技能。
+:::
 
 ---
 

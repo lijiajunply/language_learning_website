@@ -420,6 +420,7 @@ const techStack = ref([
   border-bottom: 1px solid var(--resource-border);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.8rem;
   color: var(--text-primary);
 }
@@ -544,6 +545,10 @@ const techStack = ref([
   .project-features {
     grid-template-columns: 1fr;
   }
+
+  /* .resource-list li{
+    justify-content: flex-start;
+  } */
 }
 </style>
 
@@ -574,19 +579,25 @@ const techStack = ref([
     <h4>📖 官方文档</h4>
     <ul class="resource-list">
       <li>
-        <span class="resource-icon">🔷</span>
-        <a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/" target="_blank">C# 官方文档</a>
-        - 最权威的语言参考
+        <span>
+          <span class="resource-icon">🔷</span>
+          <a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/" target="_blank">C# 官方文档</a>
+        </span>
+        最权威的语言参考
       </li>
       <li>
-        <span class="resource-icon">🌐</span>
-        <a href="https://docs.microsoft.com/zh-cn/aspnet/core/" target="_blank">ASP.NET Core 文档</a>
-        - 完整的框架指南
+        <span>
+          <span class="resource-icon">🌐</span>
+          <a href="https://docs.microsoft.com/zh-cn/aspnet/core/" target="_blank">ASP.NET Core 文档</a>
+        </span>
+        完整的框架指南
       </li>
       <li>
-        <span class="resource-icon">🗄️</span>
-        <a href="https://docs.microsoft.com/zh-cn/ef/core/" target="_blank">EF Core 文档</a>
-        - 数据访问技术详解
+        <span>
+          <span class="resource-icon">🗄️</span>
+          <a href="https://docs.microsoft.com/zh-cn/ef/core/" target="_blank">EF Core 文档</a>
+        </span>
+        数据访问技术详解
       </li>
     </ul>
   </div>
@@ -595,19 +606,25 @@ const techStack = ref([
     <h4>🔧 开发工具</h4>
     <ul class="resource-list">
       <li>
-        <span class="resource-icon">💻</span>
-            <a href="https://visualstudio.microsoft.com/zh-hans/vs/" target="_blank">Visual Studio 2022 Community </a> 
-            - 免费强大的IDE
+        <span>
+          <span class="resource-icon">💻</span>
+          <a href="https://visualstudio.microsoft.com/zh-hans/vs/" target="_blank">Visual Studio 2022 Community </a> 
+        </span>
+        免费强大的IDE
       </li>
       <li>
-        <span class="resource-icon">⚡</span>
-            <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code </a> 
-            - 轻量级编辑器
+        <span>
+          <span class="resource-icon">⚡</span>
+          <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code </a> 
+        </span>
+        轻量级编辑器
       </li>
       <li>
-        <span class="resource-icon">🔄</span>
-            <a href="https://www.jetbrains.com/zh-cn/rider/download/" target="_blank">Rider</a> 
-            - JetBrains 团队的 IDE 
+        <span>
+          <span class="resource-icon">🔄</span>
+          <a href="https://www.jetbrains.com/zh-cn/rider/download/" target="_blank">Rider</a> 
+        </span>
+        JetBrains 团队的 IDE 
       </li>
     </ul>
   </div>
