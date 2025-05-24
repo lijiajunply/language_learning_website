@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
+// .vitepress/config.js
+import { withMermaid } from "vitepress-plugin-mermaid";
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   lang: 'zh-CN',
   title: "新生代培养计划",
   description: "西建大 iOS Club 新生代培养计划",
@@ -167,5 +168,12 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://gitee.com/XAUATiOSClub/language_learning' }
     ]
-  }
-})
+  },
+  mermaid: {
+    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+  },
+  // optionally set additional config for plugin itself with MermaidPluginConfig
+  mermaidPlugin: {
+    class: "mermaid my-class", // set additional css classes for parent container 
+  },
+});

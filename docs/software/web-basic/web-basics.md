@@ -22,9 +22,7 @@ HTTP（HyperText Transfer Protocol，超文本传输协议）是**客户端（�
 
 ## **2. HTTP 请求与响应的基本流程**
 
-![](images/WEBRESOURCE81a56716bb99935eb0f91dd768af845cimage.png)
-
-```
+```mermaid
 ---
 config:
   theme: default
