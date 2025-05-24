@@ -27,7 +27,7 @@ export default withMermaid({
           items: [
             { text: '概述', link: '/software/start' },
             {
-              text: '前端学习计划',
+              text: 'Web前端学习计划',
               collapsed: true,
               items: [
                 { text: '前端学习概述', link: '/software/front-end-learning-plan' },
@@ -113,6 +113,7 @@ export default withMermaid({
             },
             {
               text: '后端学习计划',
+              collapsed: true,
               items: [
                 { text: '后端学习概述', link: '/software/backend-learning-plan' },
                 {
@@ -131,7 +132,9 @@ export default withMermaid({
                     },
                     {
                       text: 'EF Core 学习',
-                      items: [],
+                      items: [
+                        { text: '概述', link: '/software/ef-learn/start' }
+                      ],
                       collapsed: true,
                     },
                   ],
@@ -140,7 +143,52 @@ export default withMermaid({
                 {
                   text: 'Spring',
                   items: [
-                    { text: '概述', link: '/software/spring-learn/start' }
+                    { text: '概述', link: '/software/spring-learn/start' },
+                    {
+                      text: 'Java 学习',
+                      items: [
+                        { text: '总纲', link: '/software/java-learn/general-outline' },
+                        { text: 'Java 基础语法', link: '/software/java-learn/java-basic-syntax' },
+                        { text: '控制结构', link: '/software/java-learn/control-structure' },
+                        { text: '函数与模块化', link: '/software/java-learn/functions-and-modularity' },
+                        { text: '面向对象编程基础', link: '/software/java-learn/basics-of-object-oriented-programming' },
+                        { text: '封装、继承、多态', link: '/software/java-learn/encapsulation-inheritance-polymorphism' },
+                        { text: '静态与内部类', link: '/software/java-learn/static-and-internal-classes' },
+                        { text: '异常处理', link: '/software/java-learn/exception-handling' },
+                        { text: '内存管理', link: '/software/java-learn/memory-management' },
+                        { text: '并发与并行', link: '/software/java-learn/concurrency-and-parallelism' },
+                        { text: 'Java 常用 API', link: '/software/java-learn/common-java-apis' },
+                        { text: '元编程（反射与注解）', link: '/software/java-learn/metaprogramming-(reflection-and-annotation)' },
+                        { text: 'Java 生态系统概览', link: '/software/java-learn/java-ecosystem-overview' },
+                        { text: '跨平台支持', link: '/software/java-learn/cross-platform' },
+                        { text: '安全性', link: '/software/java-learn/security' },
+                        { text: '可扩展性', link: '/software/java-learn/scalability' },
+                        { text: '设计哲学', link: '/software/java-learn/philosophy-of-design' },
+                        { text: '社区与生态', link: '/software/java-learn/community-and-ecology' },
+                      ],
+                      collapsed: true,
+                    },
+                    {
+                      text: 'Spring 学习',
+                      items: [
+                        { text: '总纲', link: '/software/spring-learn/general-outline' },
+                        { text: 'Spring 简介', link: '/software/spring-learn/introduction-to-spring' },
+                        { text: 'Spring Boot 初体验', link: '/software/spring-learn/spring-boot-first-experience' },
+                        { text: 'Spring 核心容器（Core Container）', link: '/software/spring-learn/spring-core-container' },
+                        { text: 'Spring AOP（面向切面编程）', link: '/software/spring-learn/spring-aop-(system-oriented-programming)' },
+
+                        { text: 'Spring MVC（Model-View-Controller）', link: '/software/spring-learn/spring-mvc（model-view-controller）' },
+                        { text: 'Spring Boot', link: '/software/spring-learn/spring-boot' },
+                        { text: 'Spring Data 数据访问和集成', link: '/software/spring-learn/spring-data-data-access-and-integration' },
+                        { text: 'Spring Security', link: '/software/spring-learn/spring-security' },
+                        { text: 'Spring Batch', link: '/software/spring-learn/spring-batch' },
+                        { text: 'Spring Cloud', link: '/software/spring-learn/spring-cloud' },
+                        { text: 'Spring Integration', link: '/software/spring-learn/spring-integration' },
+                        { text: 'Spring WebFlux', link: '/software/spring-learn/spring-webflux' },
+                        { text: 'Spring框架的性能优化', link: '/software/spring-learn/performance-optimization-of-spring-framework' },
+                      ],
+                      collapsed: true,
+                    },
                   ],
                   collapsed: true
                 }
@@ -148,8 +196,25 @@ export default withMermaid({
             },
             {
               text: '算法学习计划',
+              collapsed: true,
               items: [
                 { text: '算法学习概述', link: '/software/algorithm-learning-plan' },
+              ]
+            },
+            {
+              text: '附录 - Docker教程',
+              collapsed: true,
+              items: [
+                { text: '总纲', link: '/software/docker-learn/general-outline' },
+                { text: 'Docker 基础概念', link: '/software/docker-learn/docker-basic-concepts' },
+                { text: 'Docker 环境安装与配置', link: '/software/docker-learn/docker-environment-installation-and-configuration' },
+                { text: 'Docker 基础命令', link: '/software/docker-learn/docker-basic-commands' },
+                { text: 'Dockerfile 与镜像构建', link: '/software/docker-learn/dockerfile-and-image-construction' },
+                { text: 'Docker 网络管理', link: '/software/docker-learn/docker-network-management' },
+                { text: 'Docker Compose', link: '/software/docker-learn/docker-compose' },
+                { text: '实战案例：Jenkins + Docker-in-Docker（DinD）', link: '/software/docker-learn/practical-case' },
+                { text: '进阶话题：容器编排与云原生部署', link: '/software/docker-learn/advanced-topics' },
+                { text: 'Windows 的 WSL 2 配置', link: '/software/docker-learn/wsl-2-configuration-for-windows' },
               ]
             },
           ]
@@ -168,6 +233,15 @@ export default withMermaid({
     socialLinks: [
       { icon: 'github', link: 'https://gitee.com/XAUATiOSClub/language_learning' }
     ]
+  },
+  markdown: {
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
+    }
   },
   mermaid: {
     // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
