@@ -1,7 +1,18 @@
-import { text } from 'mermaid/dist/rendering-util/rendering-elements/shapes/text.js';
-import { defineConfig } from 'vitepress'
 // .vitepress/config.js
 import { withMermaid } from "vitepress-plugin-mermaid";
+import 'shiki'
+
+var all = {
+  text: '部员必学指南',
+  items: [
+    {
+      text: 'Markdown', items: [
+        { text: 'Markdown 简单语法', link: '/all/md/start' },
+        { text: '社团在线编辑器使用', link: '/all/md/how-to-use-onlinemark' }
+      ], collapsed: true,
+    },
+  ]
+};
 
 export default withMermaid({
   lang: 'zh-CN',
@@ -255,6 +266,7 @@ export default withMermaid({
                 { text: 'Docker 基础概念', link: '/software/docker-learn/docker-basic-concepts' },
                 { text: 'Docker 环境安装与配置', link: '/software/docker-learn/docker-environment-installation-and-configuration' },
                 { text: 'Docker 基础命令', link: '/software/docker-learn/docker-basic-commands' },
+                { text: 'Docker 数据管理', link: '/software/docker-learn/volumes' },
                 { text: 'Dockerfile 与镜像构建', link: '/software/docker-learn/dockerfile-and-image-construction' },
                 { text: 'Docker 网络管理', link: '/software/docker-learn/docker-network-management' },
                 { text: 'Docker Compose', link: '/software/docker-learn/docker-compose' },
@@ -264,7 +276,7 @@ export default withMermaid({
               ]
             },
           ]
-        }
+        }, all
       ],
       '/hardware/': [
         {
@@ -272,8 +284,8 @@ export default withMermaid({
           items: [
             { text: '概述', link: '/hardware/start' },
           ]
-        }
-      ]
+        }, all
+      ],
     },
 
     socialLinks: [

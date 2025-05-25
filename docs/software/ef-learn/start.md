@@ -18,31 +18,51 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet tool install --global dotnet-ef
 ```
 
-## 创捷数据上下文
+## 告诉EF Core 我们想创建什么样的数据库
 
-在 Entity Framework Core (EF Core) 中，DbContext（通常称为 DataContext）是核心组件，它代表与数据库的会话，用于查询和保存数据。
+对于数据库，我们可以很浅显的把数据库 “解剖” 成这样:
 
-我们先创建一个 `DataContext`类。这个类继承 `DbContext` 类，并实现 `OnConfiguring` 方法，指定数据库连接字符串。
+```
+数据库 -> 表 -> 字段
+```
+
+对于 EF Core 来说，连接和管理数据库的是 DbContext 类，然后在DbContext类中使用 `DbSet<T>` 的属性来表示数据库中的各种表。对于每个表则由一个对应的类来表示。
+
+有点难懂，那不如先来看一个例子：
+
+我们先创建一个储存数据的类（Model）
 
 ```csharp
-public class DataContext : DbContext
-{
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite("Data Source=database.db");
-    
-    }
-    public DbSet<User> Users { get; set; }
-}
-
-public class User{
-
-    [Key]
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Email { get; set; }
+public class Member{
+	[Key]
+	public int Key{get;set;}
+	public string Name{get;set;}
+	public string Email{get;set;}
 }
 ```
+
+然后我们还需要写一个继承自DbContext的类来和数据库进行交互:
+
+```csharp
+public class MemberContext : DbContext
+{
+    public DbSet<Member> Members{ get; set; }
+
+    public string DbPath { get; }
+
+    public MemberContext()
+    {
+        var folder = Environment.SpecialFolder.LocalApplicationData;
+        var path = Environment.GetFolderPath(folder);
+        DbPath = System.IO.Path.Join(path, "Member.db");
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+        => options.UseSqlite($"Data Source={DbPath}");
+}
+```
+
+这样我们就可以使用了！但是现在还没完，我们还得进行 **数据迁移**。
 
 ## 数据迁移
 
@@ -119,3 +139,7 @@ Console.WriteLine(user.Name);
 ```
 
 剩下的，我们下面再讲
+
+微软文档：
+
+[入门 - EF Core | Microsoft Learn](https://learn.microsoft.com/zh-cn/ef/core/get-started/overview/first-app?tabs=netcore-cli)

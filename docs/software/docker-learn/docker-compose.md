@@ -1,6 +1,6 @@
-# **7. Docker Compose（多容器编排）**
+# Docker Compose（多容器编排）
 
-## **1. docker-compose.yml 文件结构**
+## docker-compose.yml 文件结构
 
 ### **基础结构**
 
@@ -30,9 +30,9 @@ networks:       # 网络定义
 | 3.x | 生产环境推荐（支持更多功能） | 
 
 
-## **2. 核心组件详解**
+## 核心组件详解
 
-### **(1) services 定义**
+### services 定义
 
 ```yaml
 services:
@@ -52,7 +52,7 @@ services:
 
 ```
 
-### **(2) networks 配置**
+### networks 配置
 
 ```yaml
 networks:
@@ -66,7 +66,7 @@ networks:
 
 ```
 
-### **(3) volumes 管理**
+### volumes 管理
 
 ```yaml
 volumes:
@@ -79,7 +79,7 @@ volumes:
 
 ```
 
-## **3. 一键部署 MySQL + Jira + Jenkins**
+## 一键部署 MySQL + Jira + Jenkins
 
 ### **完整 compose 文件**
 
@@ -167,8 +167,8 @@ docker-compose down
 ```
 用户访问
 │
-├─ 9001端口 → Jira (
-├─ 9002端口 → Jenkins (
+├─ 9001端口 → Jira
+├─ 9002端口 → Jenkins
 │
 └─ 容器间通信通过app-net网络
    │

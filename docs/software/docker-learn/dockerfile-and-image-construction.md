@@ -1,4 +1,4 @@
-# **5. Dockerfile 与镜像构建**
+# Dockerfile 与镜像构建
 
 ## **练习示例：Jira 镜像定制示例**
 

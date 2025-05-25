@@ -1,4 +1,4 @@
-# **8. 实战案例：Jenkins + Docker-in-Docker（DinD）**
+# 实战案例：Jenkins + Docker-in-Docker（DinD）
 
 ## **✅ 核心内容**
 
@@ -93,7 +93,7 @@ jenkins:
 
 #### **声明式Pipeline示例**
 
-```pipeline
+```groovy
 pipeline {
     agent any
     environment {
@@ -119,7 +119,7 @@ pipeline {
 
 #### **脚本式Pipeline示例**
 
-```
+```groovy
 node {
     checkout scm
     def image = docker.build("myapp:${env.BUILD_ID}", "./docker")
@@ -146,7 +146,7 @@ graph TB
 
 #### **完整 Jenkinsfile**
 
-```
+```groovy 
 pipeline {
     agent {
         docker {
@@ -209,7 +209,7 @@ pipeline {
 
 1. 资源限制
 
-```
+```yaml
 dind:
   deploy:
     resources:

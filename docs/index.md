@@ -12,9 +12,13 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
+      link: /start
+    - theme: alt
+      text: 软件部学习计划
       link: /software/start
     - theme: alt
-      text: 学习计划
+      text: 硬件部学习计划
+      link: /hardware/start
 
 features:
   - title: 前端学习计划

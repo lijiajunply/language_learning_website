@@ -1,8 +1,8 @@
-# **2. Docker 环境安装与配置**
+# Docker 环境安装与配置
 
-## **2.1 在 Linux / Windows / macOS 上安装 Docker**
+## 在 Linux / Windows / macOS 上安装 Docker
 
-### **（1）Linux 安装 Docker（以 Ubuntu 为例）**
+### Linux 安装 Docker（以 Ubuntu 为例）
 
 ```bash
 # 1. 卸载旧版本（如有）
@@ -40,7 +40,7 @@ docker --version
 
 适用系统：Ubuntu / Debian / CentOS（CentOS 需使用 yum 安装）
 
-### **（2）Windows 安装 Docker**
+### Windows 安装 Docker
 
 要求：
 
@@ -62,7 +62,7 @@ docker --version
 docker --version
 ```
 
-### **（3）macOS 安装 Docker**
+### macOS 安装 Docker
 
 要求：
 
@@ -83,7 +83,7 @@ docker --version
 
 ```
 
-## **2.2 配置 Docker 镜像加速（阿里云、腾讯云）**
+## 配置 Docker 镜像加速（阿里云、腾讯云）
 
 **为什么需要镜像加速？**
 
@@ -91,7 +91,7 @@ docker --version
 
 - 使用国内镜像源（如阿里云、腾讯云）加速下载。
 
-### **（1）Linux / macOS 配置**
+### Linux / macOS 配置
 
 ```bash
 # 编辑 Docker 配置文件
@@ -116,7 +116,7 @@ sudo systemctl restart docker
 
 1. 进入「镜像加速器」获取专属地址（需替换 <你的ID>）。
 
-### **（2）Windows 配置**
+### Windows 配置
 
 1. 右键 Docker 托盘图标 → Settings → Docker Engine
 
@@ -135,9 +135,9 @@ daemon.json，添加镜像源：
 
 1. 点击 Apply & Restart
 
-## **2.3 验证安装：docker version、docker info**
+## 验证安装：docker version、docker info
 
-### **（1）检查 Docker 版本**
+### 检查 Docker 版本
 
 ```bash
 docker version
@@ -166,7 +166,7 @@ Server: Docker Engine - Community
 
 - Server：Docker 引擎版本（确认是否正常运行）。
 
-### **（2）查看 Docker 系统信息**
+### 查看 Docker 系统信息
 
 ```bash
 docker info
