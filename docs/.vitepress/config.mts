@@ -286,6 +286,16 @@ export default withMermaid({
           ]
         }, all
       ],
+      '/all/': [
+        all,
+        {
+          text: '其他学习计划',
+          items: [
+            { text: '软件部学习计划', link: '/software/start' },
+            { text: '硬件部学习计划', link: '/hardware/start' }
+          ]
+        }
+      ]
     },
 
     socialLinks: [
