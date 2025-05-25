@@ -1,3 +1,4 @@
+import { text } from 'mermaid/dist/rendering-util/rendering-elements/shapes/text.js';
 import { defineConfig } from 'vitepress'
 // .vitepress/config.js
 import { withMermaid } from "vitepress-plugin-mermaid";
@@ -32,83 +33,105 @@ export default withMermaid({
               items: [
                 { text: '前端学习概述', link: '/software/front-end-learning-plan' },
                 { text: '导论', link: '/software/web-basic/introduction' },
-                { text: '环境搭建', link: '/software/web-basic/environment-construction' },
                 {
-                  text: 'HTML 基础',
-                  items: [
-                    { text: '基础知识', link: '/software/web-basic/html-basics' },
-                    { text: '表格和输入', link: '/software/web-basic/forms-and-input' },
-                    { text: '多媒体与语义化标签', link: '/software/web-basic/multimedia-and-semanticization' },
-                    { text: 'HTTP 与 Web 基础', link: '/software/web-basic/web-basics' },
-                  ],
-                  collapsed: true
+                  text: 'Web 基础学习',
+                  collapsed: true,
+                  items: [{ text: '环境搭建', link: '/software/web-basic/environment-construction' },
+                  {
+                    text: 'HTML 基础',
+                    items: [
+                      { text: '基础知识', link: '/software/web-basic/html-basics' },
+                      { text: '表格和输入', link: '/software/web-basic/forms-and-input' },
+                      { text: '多媒体与语义化标签', link: '/software/web-basic/multimedia-and-semanticization' },
+                      { text: 'HTTP 与 Web 基础', link: '/software/web-basic/web-basics' },
+                    ],
+                    collapsed: true
+                  },
+                  {
+                    text: 'CSS 基础',
+                    items: [
+                      { text: '基础知识', link: '/software/web-basic/css-basics' },
+                      { text: 'CSS 布局', link: '/software/web-basic/css-layout' },
+                      { text: 'CSS 进阶', link: '/software/web-basic/css-advanced' },
+                    ],
+                    collapsed: true
+                  },
+                  {
+                    text: 'JavaScript 基础',
+                    items: [
+                      { text: '基础知识', link: '/software/web-basic/javascript-basics' },
+                      { text: '函数与作用域', link: '/software/web-basic/functions-and-scope' },
+                      { text: 'JavaScript 进阶', link: '/software/web-basic/js-advanced' },
+                      { text: 'DOM 操作', link: '/software/web-basic/dom-manipulation' },
+                      { text: 'Web存储与Cookie', link: '/software/web-basic/cookie' },
+                    ],
+                    collapsed: true
+                  },
+                  {
+                    text: '工具与技巧',
+                    items: [
+                      { text: '开发工具', link: '/software/web-advanced/dev-tools' },
+                      { text: '构建工具', link: '/software/web-advanced/build-tools' },
+                      { text: '调试与优化', link: '/software/web-advanced/debug' },
+                      { text: 'Webpack 基础配置', link: '/software/web-advanced/webpack-basic-configuration' },
+                      { text: 'Webpack 深度教学指南', link: '/software/web-advanced/webpack-in-depth-tutorial' },
+                    ],
+                    collapsed: true
+                  },
+                  {
+                    text: '附录',
+                    items: [
+                      { text: 'ES6如何使用', link: '/software/web-advanced/how-to-use-es6' },
+                      { text: 'HTTP 与 Web 通信', link: '/software/web-advanced/http-and-communication' },
+                      { text: 'JavaScript 模拟类的方式', link: '/software/web-advanced/javascript-emulation-class-approach' },
+                      { text: 'JavaScript 中的 Promise', link: '/software/web-advanced/js-promise' },
+                      { text: 'JavaScript基础练习环境搭建', link: '/software/web-advanced/js-basic-practice' },
+                      { text: 'Web 安全', link: '/software/web-advanced/security' },
+                      { text: 'Webpack Bundle Analyzer 使用指南', link: '/software/web-advanced/webpack-bundle-analyzer' },
+                      { text: 'Webpack 多页面配置方案', link: '/software/web-advanced/webpack-multi-page-configuration' },
+                      { text: '后端基础', link: '/software/web-advanced/backend-foundation' },
+                      { text: '基于HTML+CSS的UI框架一览', link: '/software/web-advanced/ui-framework-based-on-html+css' },
+                      { text: '前端框架简介', link: '/software/web-advanced/front-end-framework' },
+                      { text: '深入理解Chunk', link: '/software/web-advanced/chunk-deep-understanding' },
+                    ],
+                    collapsed: true
+                  },
+                  {
+                    text: '练习',
+                    items: [
+                      { text: '练习1：静态网页-个人简历网站', link: '/software/web-advanced/exercise-1' },
+                      { text: '练习2：动态网页 - 在线留言板', link: '/software/web-advanced/exercise-2' },
+                      { text: '练习3：响应式网页 - 在线商城首页', link: '/software/web-advanced/exercise-3' },
+                    ],
+                    collapsed: true
+                  },
+                  {
+                    text: '综合项目',
+                    items: [
+                      { text: '综合项目1：用户管理系统开发（UI部分）', link: '/software/web-advanced/comprehensive-project-1' },
+                      { text: '综合项目2：购物车功能开发', link: '/software/web-advanced/comprehensive-project-2' },
+                    ],
+                    collapsed: true
+                  },]
                 },
                 {
-                  text: 'CSS 基础',
-                  items: [
-                    { text: '基础知识', link: '/software/web-basic/css-basics' },
-                    { text: 'CSS 布局', link: '/software/web-basic/css-layout' },
-                    { text: 'CSS 进阶', link: '/software/web-basic/css-advanced' },
-                  ],
-                  collapsed: true
+                  text: 'Vue 学习',
+                  items: [],
+                  collapsed: true,
                 },
                 {
-                  text: 'JavaScript 基础',
+                  text: '其他框架学习',
                   items: [
-                    { text: '基础知识', link: '/software/web-basic/javascript-basics' },
-                    { text: '函数与作用域', link: '/software/web-basic/functions-and-scope' },
-                    { text: 'JavaScript 进阶', link: '/software/web-basic/js-advanced' },
-                    { text: 'DOM 操作', link: '/software/web-basic/dom-manipulation' },
-                    { text: 'Web存储与Cookie', link: '/software/web-basic/cookie' },
+                    {
+                      text: 'React 学习',
+                      items: [
+
+                      ],
+                      collapsed: true,
+                    }
                   ],
-                  collapsed: true
-                },
-                {
-                  text: '工具与技巧',
-                  items: [
-                    { text: '开发工具', link: '/software/web-advanced/dev-tools' },
-                    { text: '构建工具', link: '/software/web-advanced/build-tools' },
-                    { text: '调试与优化', link: '/software/web-advanced/debug' },
-                    { text: 'Webpack 基础配置', link: '/software/web-advanced/webpack-basic-configuration' },
-                    { text: 'Webpack 深度教学指南', link: '/software/web-advanced/webpack-in-depth-tutorial' },
-                  ],
-                  collapsed: true
-                },
-                {
-                  text: '附录',
-                  items: [
-                    { text: 'ES6如何使用', link: '/software/web-advanced/how-to-use-es6' },
-                    { text: 'HTTP 与 Web 通信', link: '/software/web-advanced/http-and-communication' },
-                    { text: 'JavaScript 模拟类的方式', link: '/software/web-advanced/javascript-emulation-class-approach' },
-                    { text: 'JavaScript 中的 Promise', link: '/software/web-advanced/js-promise' },
-                    { text: 'JavaScript基础练习环境搭建', link: '/software/web-advanced/js-basic-practice' },
-                    { text: 'Web 安全', link: '/software/web-advanced/security' },
-                    { text: 'Webpack Bundle Analyzer 使用指南', link: '/software/web-advanced/webpack-bundle-analyzer' },
-                    { text: 'Webpack 多页面配置方案', link: '/software/web-advanced/webpack-multi-page-configuration' },
-                    { text: '后端基础', link: '/software/web-advanced/backend-foundation' },
-                    { text: '基于HTML+CSS的UI框架一览', link: '/software/web-advanced/ui-framework-based-on-html+css' },
-                    { text: '前端框架简介', link: '/software/web-advanced/front-end-framework' },
-                    { text: '深入理解Chunk', link: '/software/web-advanced/chunk-deep-understanding' },
-                  ],
-                  collapsed: true
-                },
-                {
-                  text: '练习',
-                  items: [
-                    { text: '练习1：静态网页-个人简历网站', link: '/software/web-advanced/exercise-1' },
-                    { text: '练习2：动态网页 - 在线留言板', link: '/software/web-advanced/exercise-2' },
-                    { text: '练习3：响应式网页 - 在线商城首页', link: '/software/web-advanced/exercise-3' },
-                  ],
-                  collapsed: true
-                },
-                {
-                  text: '综合项目',
-                  items: [
-                    { text: '综合项目1：用户管理系统开发（UI部分）', link: '/software/web-advanced/comprehensive-project-1' },
-                    { text: '综合项目2：购物车功能开发', link: '/software/web-advanced/comprehensive-project-2' },
-                  ],
-                  collapsed: true
-                },
+                  collapsed: true,
+                }
               ]
             },
             {
@@ -165,6 +188,29 @@ export default withMermaid({
                         { text: '可扩展性', link: '/software/java-learn/scalability' },
                         { text: '设计哲学', link: '/software/java-learn/philosophy-of-design' },
                         { text: '社区与生态', link: '/software/java-learn/community-and-ecology' },
+                      ],
+                      collapsed: true,
+                    },
+                    {
+                      text: 'Java Orm 学习',
+                      items: [
+                        { text: '导论', link: '/software/javaorm-learn/general-outline' },
+                        { text: 'ORM概念', link: '/software/javaorm-learn/orm' },
+                        { text: '数据库访问技术速览与比较', link: '/software/javaorm-learn/quick-and-comparison-of-database-access-technology' },
+                        { text: 'JDBC', link: '/software/javaorm-learn/jdbc' },
+                        { text: 'hibernate', link: '/software/javaorm-learn/hibernate' },
+                        { text: '深入理解 MyBatis', link: '/software/javaorm-learn/mybatis' },
+                        { text: '你应该知道的 JPA', link: '/software/javaorm-learn/jpa' },
+                        { text: 'Repository模式理论&实现', link: '/software/javaorm-learn/repository' },
+                        { text: '事务处理 & Unit Of Work', link: '/software/javaorm-learn/transaction-&-unit-of-work' },
+                        { text: '非关系型数据处理', link: '/software/javaorm-learn/non-relational-data-processing' },
+                        { text: 'HQL', link: '/software/javaorm-learn/hql' },
+                        { text: 'JPA标准', link: '/software/javaorm-learn/jpa-standard' },
+                        { text: 'Spring Data JPA详解', link: '/software/javaorm-learn/spring-data-jpa-details' },
+                        { text: '方法名自动生成查询的原理', link: '/software/javaorm-learn/the-principle-of-automatic-method-name-generation-query' },
+                        { text: '分页和排序', link: '/software/javaorm-learn/pagination-and-sorting' },
+                        { text: '综合项目 操作手册', link: '/software/javaorm-learn/comprehensive-project-1' },
+                        { text: '综合项目 基于命令行的用户管理系统', link: '/software/javaorm-learn/comprehensive-project-2' },
                       ],
                       collapsed: true,
                     },
