@@ -308,6 +308,22 @@ export default withMermaid({
           ]
         }, all
       ],
+      '/office/': [
+        {
+          text: '交流实践部学习计划',
+          items: [
+            { text: '概述', link: '/office/start' },
+          ]
+        }, all
+      ],
+      '/new-media/': [
+        {
+          text: '新媒体部学习计划',
+          items: [
+            { text: '概述', link: '/new-media/start' },
+          ]
+        }, all
+      ],
       '/all/': [
         all,
         {
