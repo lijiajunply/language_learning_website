@@ -28,8 +28,17 @@ export default withMermaid({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '软件部学习计划', link: '/software/start' },
-      { text: '硬件部学习计划', link: '/hardware/start' }
+      {
+        text: '软件部', items: [
+          { text: '概要', link: '/software/start' },
+          { text: '前端学习计划', link: '/software/front-end-learning-plan' },
+          { text: '后端学习计划', link: '/software/backend-learning-plan' },
+          { text: '附录', link: '/software/docker-learn/general-outline' },
+        ]
+      },
+      { text: '硬件部', link: '/hardware/start' },
+      { text: '交流实践部', link: '/office/start' },
+      { text: '新媒体部', link: '/new-media/start' }
     ],
 
     sidebar: {
@@ -136,7 +145,20 @@ export default withMermaid({
                     {
                       text: 'React 学习',
                       items: [
-
+                        { text: '总纲', link: '/software/react-learn/general-outline' },
+                        { text: 'React简介', link: '/software/react-learn/introduction-to-react' },
+                        { text: '搭建React开发环境', link: '/software/react-learn/build-a-react-development-environment' },
+                        { text: 'JSX语法深度解析', link: '/software/react-learn/deep-analysis-of-jsx-syntax' },
+                        { text: '组件与 Props', link: '/software/react-learn/components-and-props' },
+                        { text: 'State与事件处理', link: '/software/react-learn/state-and-event-processing' },
+                        { text: '生命周期与 Hooks', link: '/software/react-learn/lifecycle-and-hooks' },
+                        { text: '组件通信', link: '/software/react-learn/component-communication' },
+                        { text: '表单处理与复杂状态管理', link: '/software/react-learn/form-processing-and-complex-state-management' },
+                        { text: '性能优化', link: '/software/react-learn/performance-optimization' },
+                        { text: 'React Router', link: '/software/react-learn/react-router' },
+                        { text: '状态管理 - Redux', link: '/software/react-learn/status-management-redux' },
+                        { text: '数据获取与API集成', link: '/software/react-learn/data-acquisition-and-api-integration' },
+                        { text: '样式与UI库', link: '/software/react-learn/styles-and-ui-libraries' },
                       ],
                       collapsed: true,
                     }
@@ -292,7 +314,9 @@ export default withMermaid({
           text: '其他学习计划',
           items: [
             { text: '软件部学习计划', link: '/software/start' },
-            { text: '硬件部学习计划', link: '/hardware/start' }
+            { text: '硬件部学习计划', link: '/hardware/start' },
+            { text: '交流实践部学习计划', link: '/office/start' },
+            { text: '新媒体部学习计划', link: '/new-media/start' }
           ]
         }
       ]
@@ -312,7 +336,7 @@ export default withMermaid({
     }
   },
   mermaid: {
-    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+    
   },
   // optionally set additional config for plugin itself with MermaidPluginConfig
   mermaidPlugin: {

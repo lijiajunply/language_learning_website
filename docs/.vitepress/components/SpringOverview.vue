@@ -77,42 +77,6 @@
         </div>
       </div>
     </section>
-
-    <!-- 快速开始 -->
-    <section class="quickstart-section">
-      <div class="container">
-        <h2 class="section-title">快速开始</h2>
-        <div class="quickstart-content">
-          <div class="code-example">
-            <h3>创建第一个Spring应用</h3>
-            <pre><code class="language-java">@SpringBootApplication
-public class DemoApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
-    }
-}
-
-@RestController
-public class HelloController {
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello, Spring!";
-    }
-}</code></pre>
-          </div>
-          <div class="quickstart-steps">
-            <h3>开始步骤</h3>
-            <ol>
-              <li>安装Java 8+和Maven/Gradle</li>
-              <li>使用Spring Initializr创建项目</li>
-              <li>添加必要的依赖</li>
-              <li>编写第一个Controller</li>
-              <li>运行应用程序</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
