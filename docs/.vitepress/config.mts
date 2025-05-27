@@ -1,6 +1,6 @@
 // .vitepress/config.js
 import { withMermaid } from "vitepress-plugin-mermaid";
-import 'shiki'
+import  footnote_plugin  from "markdown-it-footnote";
 
 var all = {
   text: '部员必学指南',
@@ -21,6 +21,9 @@ export default withMermaid({
   head: [
     ['link', { rel: 'icon', sizes: '32x32', href: '/favicon.ico' }],
   ],
+  sitemap: {
+    hostname: 'https://plan.xauat.site'
+  },
   themeConfig: {
     search: {
       provider: 'local'
@@ -313,6 +316,11 @@ export default withMermaid({
           text: '交流实践部学习计划',
           items: [
             { text: '概述', link: '/office/start' },
+            {
+              text: 'Word技巧', items: [
+                { text: '概述', link: '/office/word/start.md' },
+              ]
+            }
           ]
         }, all
       ],
@@ -349,10 +357,17 @@ export default withMermaid({
       dangerLabel: '危险',
       infoLabel: '信息',
       detailsLabel: '详细信息'
+    },
+    config(md) {
+      md.use(footnote_plugin)
+    },
+    image: {
+      // 默认禁用；设置为 true 可为所有图片启用懒加载。
+      lazyLoading: true
     }
   },
   mermaid: {
-    
+
   },
   // optionally set additional config for plugin itself with MermaidPluginConfig
   mermaidPlugin: {

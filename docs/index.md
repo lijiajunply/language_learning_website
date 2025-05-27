@@ -14,11 +14,8 @@ hero:
       text: 快速开始
       link: /start
     - theme: alt
-      text: 软件部学习计划
-      link: /software/start
-    - theme: alt
-      text: 硬件部学习计划
-      link: /hardware/start
+      text: 制作团队
+      link: /team
 
 features:
   - title: 前端学习计划

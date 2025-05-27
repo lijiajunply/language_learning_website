@@ -163,3 +163,7 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+.medium-zoom-image {
+  z-index: 9999 !important;
+}

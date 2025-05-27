@@ -45,6 +45,10 @@ const toggleProgress = (index) => {
   --tips-text-dark: #90cdf4;
 }
 
+.vp-doc a {
+  text-decoration: none;
+}
+
 .hero-section {
   background: linear-gradient(135deg, var(--hero-bg-start) 0%, var(--hero-bg-end) 100%);
   color: var(--hero-text);
