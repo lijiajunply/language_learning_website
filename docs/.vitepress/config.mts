@@ -1,6 +1,6 @@
 // .vitepress/config.js
 import { withMermaid } from "vitepress-plugin-mermaid";
-import  footnote_plugin  from "markdown-it-footnote";
+import footnote_plugin from "markdown-it-footnote";
 
 var all = {
   text: '部员必学指南',
@@ -25,10 +25,8 @@ export default withMermaid({
     hostname: 'https://plan.xauat.site'
   },
   themeConfig: {
-    search: {
-      provider: 'local'
-    },
-    // https://vitepress.dev/reference/default-theme-config
+    sidebarMenuLabel: '目录',
+    returnToTopLabel: '回到顶部',
     nav: [
       { text: '主页', link: '/' },
       {
