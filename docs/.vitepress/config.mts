@@ -1,6 +1,7 @@
 // .vitepress/config.js
 import { withMermaid } from "vitepress-plugin-mermaid";
 import footnote_plugin from "markdown-it-footnote";
+import { text } from "mermaid/dist/rendering-util/rendering-elements/shapes/text.js";
 
 var all = {
   text: '部员必学指南',
@@ -298,7 +299,7 @@ export default withMermaid({
                 { text: 'Windows 的 WSL 2 配置', link: '/software/docker-learn/wsl-2-configuration-for-windows' },
               ]
             },
-            {text: '附录 - Git使用',link:'/software/git-learn'}
+            { text: '附录 - Git使用', link: '/software/git-learn' }
           ]
         }, all
       ],
@@ -318,7 +319,7 @@ export default withMermaid({
             {
               text: 'Word技巧', items: [
                 { text: '概述', link: '/office/word/start.md' },
-              ]
+              ], collapsed: true,
             }
           ]
         }, all
@@ -328,6 +329,11 @@ export default withMermaid({
           text: '新媒体部学习计划',
           items: [
             { text: '概述', link: '/new-media/start' },
+            {
+              text: 'PPT技巧', items: [
+                { text: '关于PPT排版问题', link: '/new-media/ppt/start.md' },
+              ], collapsed: true,
+            }
           ]
         }, all
       ],
