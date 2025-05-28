@@ -105,10 +105,22 @@ md现在功能很多：
 在这里你可以直接写css类，就比如说我挺喜欢优雅主题，但是这个主题的引用块，我不是很喜欢，于是我就改了一下：
 
 ```css
-/* 引用样式 */blockquote {
-  border : none;}
-/* 引用段落样式 */blockquote_p {
-  font-style: initial;  margin-top: 10px;  margin-bottom: 10px;}
+/* 三级标题样式 */
+h3 {
+  border-bottom: none;
+}
+/* 引用样式 */
+blockquote {
+  border : none;
+  font-style: initial;
+}
+/* 引用段落样式 */
+blockquote_p {
+  font-style: initial;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 ```
 
 而且这些都是实时更改的，就很舒服。

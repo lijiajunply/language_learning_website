@@ -298,6 +298,7 @@ export default withMermaid({
                 { text: 'Windows 的 WSL 2 配置', link: '/software/docker-learn/wsl-2-configuration-for-windows' },
               ]
             },
+            {text: '附录 - Git使用',link:'/software/git-learn'}
           ]
         }, all
       ],
