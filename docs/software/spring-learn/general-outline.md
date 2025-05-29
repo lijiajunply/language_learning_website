@@ -1,5 +1,7 @@
 #  Spring Boot 教程概述
 
+> 本系列为网络资源，仅供学习参考，版权归原作者所有。
+
 ## **第一篇：先导篇——开启Spring之旅，初识Spring Boot**
 
 **目标：** 了解Spring的设计目标及核心功能，通过Spring Boot初步体验Spring的高效开发模式。
