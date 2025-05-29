@@ -21,6 +21,9 @@ export default withMermaid({
   description: "西建大 iOS Club 新生代培养计划",
   head: [
     ['link', { rel: 'icon', sizes: '32x32', href: '/favicon.ico' }],
+    ['meta', { name: 'keywords', content: '新生代培养计划, 新生培养, 西建大, iOS Club, 西安建筑科技大学, iOS Club of XAUAT, 培养计划' }],
+    ['meta', { name: 'description', content: '西建大 iOS Club 新生代培养计划' }],
+    ['meta', { name: 'author', content: 'iOS Club of XAUAT' }],
   ],
   sitemap: {
     hostname: 'https://plan.xauat.site'
@@ -281,6 +284,30 @@ export default withMermaid({
               items: [
                 { text: '算法学习概述', link: '/software/algorithm-learning-plan' },
               ]
+            },
+            {
+              text: 'App 开发学习计划',
+              items: [
+                { text: '概述', link: '/software/app-development-learning-guide' },
+                { text: 'Flutter 开发',
+                  collapsed: true,
+                  items:[
+
+                  ]
+                },
+                {
+                  text: 'Avalonia 开发',
+                  collapsed: true,
+                  items: [
+                    { text: 'Avalonia 概述，安装与配置', link: '/software/avalonia-learn/avalonia-1' },
+                    { text: '简单介绍一下项目', link: '/software/avalonia-learn/avalonia-2' },
+                    { text: '普通架构实战——计算器', link: '/software/avalonia-learn/avalonia-3' },
+                    { text: 'MVVM架构实战——文件浏览器', link: '/software/avalonia-learn/avalonia-4' },
+                    { text: '使用其他主题来写一个待办事项软件', link: '/software/avalonia-learn/avalonia-5' },
+                  ]
+                }
+              ],
+              collapsed: true,
             },
             {
               text: '附录 - Docker教程',
