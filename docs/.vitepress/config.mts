@@ -292,7 +292,7 @@ export default withMermaid({
                 { text: 'Flutter 开发',
                   collapsed: true,
                   items:[
-
+                      {  text: 'Flutter 概述', link: '/software/flutter-learn/start' }
                   ]
                 },
                 {
