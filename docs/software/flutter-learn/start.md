@@ -229,7 +229,7 @@ setState(() {
 
 直接跟着安装就行。安装好了之后在这里选择你刚才安装好的模拟器：
 
-![alt text](images/start/image6.png)
+![](images/start/image6.png)
 
 运行!
 
