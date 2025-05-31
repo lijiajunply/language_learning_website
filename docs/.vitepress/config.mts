@@ -38,6 +38,7 @@ export default withMermaid({
           { text: '概要', link: '/software/start' },
           { text: '前端学习计划', link: '/software/front-end-learning-plan' },
           { text: '后端学习计划', link: '/software/backend-learning-plan' },
+          { text: 'App开发学习计划', link: '/software/app-development-learning-plan' },
           { text: '附录', link: '/software/docker-learn/general-outline' },
         ]
       },
@@ -288,11 +289,13 @@ export default withMermaid({
             {
               text: 'App 开发学习计划',
               items: [
-                { text: '概述', link: '/software/app-development-learning-guide' },
-                { text: 'Flutter 开发',
+                { text: '概述', link: '/software/app-development-learning-plan' },
+                {
+                  text: 'Flutter 开发',
                   collapsed: true,
-                  items:[
-                      {  text: 'Flutter 概述', link: '/software/flutter-learn/start' }
+                  items: [
+                    { text: 'Flutter 概述', link: '/software/flutter-learn/start' },
+                    { text: '一些基本概念', link: '/software/flutter-learn/basic-concepts' },
                   ]
                 },
                 {
@@ -388,7 +391,8 @@ export default withMermaid({
       warningLabel: '警告',
       dangerLabel: '危险',
       infoLabel: '信息',
-      detailsLabel: '详细信息'
+      detailsLabel: '详细信息',
+      noteLabel: '注意'
     },
     config(md) {
       md.use(footnote_plugin)

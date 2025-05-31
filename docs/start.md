@@ -7,7 +7,7 @@ layout: page
     <div class="gradient-bg"></div>
     <div class="intro-content">
       <h1 class="intro-title">
-        <span class="title-highlight">西建大 iOS Club</span>
+        <span>西建大 iOS Club</span>
         <br>新生代培养计划
       </h1>
       <p class="intro-subtitle">
@@ -159,7 +159,7 @@ layout: page
 
 .title-highlight {
   display: inline-block;
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp 0.2s ease-out;
 }
 
 .intro-subtitle {

@@ -6,8 +6,7 @@ layout: page
 import {
   VPTeamPage,
   VPTeamPageTitle,
-  VPTeamMembers,
-  VPTeamPageSection
+  VPTeamMembers
 } from 'vitepress/theme'
 
 const members = [
@@ -34,6 +33,11 @@ const members = [
     links: [
       { icon: 'github', link: 'https://gitee.com/huang15963' },
     ]
+  },
+  {
+    avatar: '/ios_logo.jpg',
+    name: '妖陌',
+    title: 'Creator',
   }
 ]
 </script>
