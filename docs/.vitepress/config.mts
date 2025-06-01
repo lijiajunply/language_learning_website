@@ -296,6 +296,7 @@ export default withMermaid({
                   items: [
                     { text: 'Flutter 概述', link: '/software/flutter-learn/start' },
                     { text: '一些基本概念', link: '/software/flutter-learn/basic-concepts' },
+                     { text: '项目一 写一个Todo应用', link: '/software/flutter-learn/tutorial-1' },
                   ]
                 },
                 {
