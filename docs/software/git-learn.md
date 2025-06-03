@@ -1,149 +1,143 @@
-# Git 基本指令与使用指南
+# 🚀 Git 从小白到入门
+## Git是什么？
+Git是目前世界上最先进的**分布式版本控制系统**。
 
-## 一、Git简介
-Git 是一个分布式版本控制系统，用于跟踪文件变更、协作开发和管理代码历史。核心功能包括：
-- **版本回溯**：随时回退到任意历史版本
-- **分支管理**：并行开发不同功能
-- **团队协作**：多人协同修改同一项目
+## 什么时候需要用到git？
+不知道你工作的时候有没有遇到这样的情况：
 
-## 二、环境配置
-### 1. 安装Git
-- **Windows**：访问 [git-scm.com](https://git-scm.com) 下载安装包
-- **macOS**：`brew install git`
-- **Linux**：`sudo apt-get install git` (Debian/Ubuntu)
+就比如说我们的社团官网
 
-### 2. 初始配置
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-git config --global core.editor "vim"  # 设置默认编辑器
-```
+![](images/image.png)
 
-## 三、核心概念
-| 术语       | 说明                          |
-|------------|-----------------------------|
-| Repository | 仓库，存储项目所有历史记录和元数据 |
-| Working Directory | 工作目录，当前修改的文件       |
-| Staging Area | 暂存区，准备提交的变更集合     |
-| Commit     | 提交，包含变更描述的快照        |
-| Branch     | 分支，独立开发线               |
+再进行一些功能更新时肯定会出现bug，例如上次的全员管理员事件，那我们在修复的同时还要不影响正常的使用该如何去做？
+这时候就需要用git回退一个版本，本质上gitee也可以做到类似的事件，但是一个版本新建一个仓库还是太费劲了
 
-## 四、常用指令速查
+在过去的工作中，由于每个网站版本迭代都需要独立保存副本，频繁的复制粘贴操作导致文件数量呈指数级增长。随着版本库的持续膨胀，追溯不同版本间的功能差异和修改记录逐渐成为棘手难题——您是否还能清晰回忆起每个存档版本对应的具体功能迭代？
 
-### 1. 仓库操作
-```bash
-git init                  # 初始化新仓库
-git clone <repo_url>      # 克隆远程仓库
-```
+正是为了系统化解决这种版本管理困境，实现对代码变更的精准追踪和高效协作，专业的版本控制系统（git）由此诞生。这套工具通过智能化的变更记录和分支管理，彻底革新了多版本并行开发的协作模式。
 
-### 2. 文件跟踪
-```bash
-git add <file>            # 添加单个文件到暂存区
-git add .                 # 添加所有修改到暂存区
-git rm <file>             # 删除文件并记录操作
-```
+## 怎么用git实现版本管理
+当我们创建了一个专用文件夹来集中管理项目文件，现在需要将Git版本控制系统接入该目录。初始化Git仓库后，每次完成文件修改并保存时，只需执行git commit命令，Git便会自动生成精准的工程快照——这相当于给当前工作状态拍摄了一张高精度存档照片。即使后续对文件进行覆盖编辑甚至误删除（只要保留.git版本库），所有历史状态都能通过Git的时光机功能完整复原。
 
-### 3. 提交管理
-```bash
-git commit -m "提交描述"    # 提交暂存区变更
-git commit --amend        # 修改最近一次提交（未推送时使用）
-```
+通过运行git log命令，您将看到完整的版本演变图谱如下。
 
-### 4. 查看信息
-```bash
-git status               # 查看工作区状态
-git log                  # 显示提交历史
-git log --oneline        # 简洁版历史记录
-git diff                 # 显示未暂存的修改
-```
+![](images/image1.png)
 
-### 5. 远程仓库
-```bash
-git remote add origin <url>  # 添加远程仓库
-git push -u origin main     # 首次推送并建立追踪
-git pull                   # 拉取远程更新
-git fetch                  # 获取远程变更但不合并
-```
+每个提交节点不仅包含用户自定义的版本描述（如"优化地形渲染算法"），更带有全球唯一的40位SHA-1哈希身份证（图中黄色编码）。当需要回溯特定版本时，只需执行git checkout [哈希ID]，系统便会将文件状态精确还原至该历史节点。
 
-## 五、分支管理
-```bash
-git branch               # 查看本地分支
-git branch <new-branch>  # 创建新分支
-git checkout <branch>    # 切换分支
-git merge <branch>       # 合并指定分支到当前分支
-git branch -d <branch>   # 删除已合并的分支
-```
+实际工作中，您只需专注于主文件的迭代开发，其余实验性文件可作为临时分支存在。当项目最终验收时，通过Git的分支整理功能，所有中间过程文件都将被智能清理，仅保留经过验证的核心成果。值得强调的是，Git作为通用型版本控制方案，可无缝管理Office文档（Word/Excel）、工程图纸（DWG/DGN）、BIM模型（RVT）等200+文件格式的版本演进。
 
 
-## 六、撤销操作
-```bash
-git restore <file>        # 撤销工作区修改（Git 2.23+）
-git reset HEAD <file>     # 从暂存区移除文件
-git checkout HEAD <file>  # 恢复文件到最近提交状态
-git revert <commit-id>    # 创建新的提交来撤销指定提交
-```
+### 工作原理 / 流程
 
+![](images/image2.png)
 
-## 七、标签管理
-```bash
-git tag                  # 列出所有标签
-git tag v1.0             # 创建轻量标签
-git tag -a v1.0 -m "版本说明"  # 创建含注释的标签
-git push origin --tags   # 推送所有标签到远程
-```
-
-
-## 八、.gitignore 文件
-创建 `.gitignore` 文件排除不需要跟踪的文件：
-```
-# 示例
-*.log
-node_modules/
-.DS_Store
-```
-
-
-## 九、高级技巧
-### 1. 储藏修改
-```bash
-git stash        # 临时保存工作区修改
-git stash pop    # 恢复最近储藏的内容
-```
-
-### 2. 子模块管理
-```bash
-git submodule add <repo_url>  # 添加子模块
-git submodule update --init   # 初始化子模块
-```
-
-### 3. 重写历史（谨慎使用）
-```bash
-git rebase -i HEAD~3  # 交互式修改最近3次提交
-```
-
-## 十、最佳实践
-1. **频繁提交**：小步提交，保持每个提交的独立性
-2. **规范消息**：使用 [Conventional Commits](https://www.conventionalcommits.org/) 格式
-3. **分支策略**：推荐使用 Git Flow 或 GitHub Flow
-4. **定期同步**：每天开始工作前先执行 `git pull`
-
-
-## 常见问题
-### Q1: 提交到错误分支怎么办？
-```bash
-git reset HEAD~1 --soft    # 撤销提交但保留修改
-git stash                  # 保存修改
-git checkout correct-branch
-git stash pop
-git add . && git commit -m "新的提交"
-```
-
-### Q2: 如何找回丢失的提交？
-```bash
-git reflog                # 查看所有操作记录
-git reset --hard <commit-id>  # 恢复到指定记录
-```
+>- **Workspace**：工作区
+>- **Index / Stage**：暂存区
+>- **Repository**：仓库区（本地仓库）
+>- **Remote**：远程仓库
 
 ---
 
-通过掌握这些核心指令，您已具备日常使用Git进行版本控制的基础能力。建议在实际项目中多加练习以巩固技能。
+## SVN与Git的最主要区别
+### SVN（集中式版本控制）
+- 版本库集中存放在中央服务器
+- 必须联网才能工作
+- 提交和更新依赖中央服务器
+
+### Git（分布式版本控制）
+- 每个用户的电脑都是完整的版本库
+- 支持本地操作（无需联网）
+- 通过推送修改实现协作
+
+---
+
+## ⚙️ 如何安装
+
+### 全平台安装
+官网上有详尽的安装教程：https://git-scm.com/downloads
+
+windown系统下的就是下载e文件，一直点击下一步就可以了。
+
+安装完成后，在任何一个文件夹内点击鼠标右键：
+
+看到这两条，则说明安装成功。
+
+## 🔍 验证配置：
+在安装完成之后，需要对git进行配置，用来说明你的身份。(可能有些地方不明白怎么做)
+下述大部分的代码需要在终端进行操作
+### 如何使用终端呢？
+非常简单
+Windows电脑win+R 然后输入cmd窗口即可
+Mac电脑按下command+空格后搜索terminal即可
+下述的蓝框内代码基本都要在这里操作
+
+```bash
+# 👤 身份设置（重要！关乎到你的项目能不能push到上面）
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱
+# 把Your Name改成你的昵称；
+# 把email@example.com改成邮箱的格式，只要格式正确即可。
+```
+
+## 如何使用git
+配置完成即可使用，人们擅长在未知中学习。
+
+1.让git接管文件夹。
+（git接管图片）
+在当前文件夹下鼠标右键
+
+>1.点击git bash here
+2.弹出的命令行窗口中输入：git init，回车
+3.就会生成.git文件夹，这是隐藏文件夹
+
+2.开始备份初始版本。
+在终端界面输入下述代码
+```bash
+git add .
+git commit -m "这里是这个版本的说明自己随你需求填写"
+```
+好了，git已经帮你的初版文件了。
+
+以后你修改完了，你想备份当前版本，或者你预计可能用到；保存文件，关闭文件，这时候我们需要怎么办
+
+3.你要查看备份了哪些版本
+```bash
+git log
+```
+4.恢复某个版本的文件
+```bash
+git reset --hard "版本序列号"
+```
+比如：IOS1.0
+
+>1.用git log查看版本序列号
+2.输入git reset --hard 序列号这里的序列号复制粘贴过来，不能用ctrl+c，可以用右键复制粘贴。
+3.当前文件就会变成IOS1.0版本的文件。
+
+这些只是git的最基础的一些操作，并不能支撑一个独立项目的开发，后续还需要更多更大量的学习去辅助完成，道路任重而道远。
+
+
+
+## 🚨 救火指令速查表
+
+| 场景描述         | 急救命令                         | 注意事项                 |
+|------------------|----------------------------------|--------------------------|
+| 误删未提交文件   | `git checkout HEAD -- filename` | 仅适用于未commit的删除   |
+| 撤销最近提交     | `git reset --soft HEAD~1`        | 保留工作区修改           |
+| 恢复历史版本文件 | `git checkout COMMIT_ID -- path` | 需要先通过`git log`查ID  |
+
+### 带注释的增强版
+| 场景                 | 🚑 急救命令                       | 📝 说明                                  |
+|----------------------|----------------------------------|----------------------------------------|
+| **文件误删除**       | ``git restore --source=HEAD file`` | Git 2.23+ 推荐方式                    |
+| **提交信息写错**     | `git commit --amend`             | 修改最后一次提交信息                  |
+| **错误合并分支**     | `git reset --hard ORIG_HEAD`     | 快速回退到合并前状态                  |
+| **找回被覆盖的文件** | `git reflog` + `git checkout`    | 通过操作日志定位丢失的commit          |
+
+## 📚 学习资源
+官方文档：Git Book 📖
+
+交互式学习：Learn Git Branching 🎮
+
+备忘清单：Git Cheat Sheet 📃
