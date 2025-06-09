@@ -1,7 +1,6 @@
 // .vitepress/config.js
 import { withMermaid } from "vitepress-plugin-mermaid";
 import footnote_plugin from "markdown-it-footnote";
-import { text } from "mermaid/dist/rendering-util/rendering-elements/shapes/text.js";
 
 var all = {
   text: '部员必学指南',
@@ -184,7 +183,15 @@ export default withMermaid({
                     { text: '概述', link: '/software/aspnetcore-learn/start' },
                     {
                       text: 'C# 基础学习',
-                      items: [],
+                      items: [
+                        { text: '导论', link: '/software/csharp-learn/csharp-1' },
+                        { text: 'C# 基础', link: '/software/csharp-learn/csharp-2' },
+                        { text: '分支与循环', link: '/software/csharp-learn/csharp-3' },
+                        { text: '写点复杂的东西', link: '/software/csharp-learn/csharp-4' },
+                        { text: 'String的更多用法', link: '/software/csharp-learn/csharp-5' },
+                        { text: '函数', link: '/software/csharp-learn/csharp-6' },
+                        { text: '结构体，枚举，类', link: '/software/csharp-learn/csharp-7' },
+                      ],
                       collapsed: true,
                     },
                     {
