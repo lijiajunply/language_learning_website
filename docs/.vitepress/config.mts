@@ -166,6 +166,13 @@ export default withMermaid({
                         { text: '样式与UI库', link: '/software/react-learn/styles-and-ui-libraries' },
                       ],
                       collapsed: true,
+                    },
+                    {
+                      text: 'Tailwind 学习',
+                      items: [
+                        
+                      ],
+                      collapsed: true,
                     }
                   ],
                   collapsed: true,

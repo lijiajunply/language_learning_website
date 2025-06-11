@@ -526,14 +526,18 @@ const toggleProgress = (index) => {
     <h3>Vue</h3>
     <p>基本框架学习</p>
   </div>
+  
   <div class="module-card">
     <h3>Tailwind</h3>
     <p>其他框架学习</p>
   </div>
-  <div class="module-card">
-    <h3>React</h3>
-    <p>其他框架学习</p>
-  </div>
+
+  <a href="/software/react-learn/general-outline.html">
+    <div class="module-card">
+      <h3>React</h3>
+      <p>其他框架学习</p>
+    </div>
+  </a>
 </div>
 
 ## 📅 学习时间线
