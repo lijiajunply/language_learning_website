@@ -7,6 +7,7 @@ import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import './style.css'
+import AppLearnPlan from '../components/AppLearnPlan.vue'
 
 export default {
   extends: DefaultTheme,
@@ -18,6 +19,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // ...
      app.component('SpringOverview', SpringOverview)
+     app.component('AppLearnPlan', AppLearnPlan)
   },
   setup() {
     const route = useRoute() 

@@ -45,6 +45,75 @@ const learningPath = ref([
 ])
 </script>
 
+<div class="hero-section">
+  <h1 class="hero-title">掌握跨平台应用开发</h1>
+  <p class="hero-description">从桌面到移动，从原生到小程序，构建无处不在的应用体验</p>
+</div>
+
+## 🚀 学习框架
+
+<div class="frameworks-grid">
+  <div 
+    v-for="framework in frameworks" 
+    :key="framework.name"
+    class="framework-card"
+    :style="`--card-color: ${framework.color}`"
+  >
+    <div class="framework-header">
+      <span class="framework-icon">{{ framework.icon }}</span>
+      <h3 class="framework-name">{{ framework.name }}</h3>
+    </div>
+    <p class="framework-description">{{ framework.description }}</p>
+    <ul class="framework-features">
+      <li v-for="feature in framework.features" :key="feature">
+        {{ feature }}
+      </li>
+    </ul>
+    <div class="framework-meta">
+      <div class="meta-item">
+        <span class="meta-label">学习周期</span>
+        <span class="meta-value">{{ framework.duration }}</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">难度等级</span>
+        <span class="meta-value">{{ framework.difficulty }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 📚 学习路径
+
+<AppLearnPlan />
+
+## 🎯 核心技能树
+
+### Avalonia 技能要点
+- **C# 与 .NET 基础**：掌握面向对象编程
+- **XAML 界面设计**：声明式 UI 构建
+- **MVVM 架构模式**：数据绑定与命令模式
+- **跨平台部署**：Windows、macOS、Linux 发布
+
+### Flutter 技能要点
+- **Dart 语言基础**：异步编程、空安全
+- **Widget 体系**：StatelessWidget 与 StatefulWidget
+- **状态管理**：Provider、Riverpod、GetX
+- **平台集成**：原生功能调用、插件开发
+
+### 微信小程序技能要点
+- **小程序架构**：理解生命周期、组件化开发
+- **WXML 与 WXSS**：小程序专属标记语言
+- **云开发能力**：云函数、云数据库
+- **微信生态集成**：支付、分享、登录
+
+## 🛠️ 推荐工具与资源
+
+### 开发工具
+- **Avalonia**: Visual Studio / JetBrains Rider
+- **Flutter**: Android Studio / VS Code + Flutter 插件
+- **微信小程序**: 微信开发者工具
+
+
 <style scoped>
 .hero-section {
   text-align: center;
@@ -306,83 +375,3 @@ const learningPath = ref([
   }
 }
 </style>
-
-<div class="hero-section">
-  <h1 class="hero-title">掌握跨平台应用开发</h1>
-  <p class="hero-description">从桌面到移动，从原生到小程序，构建无处不在的应用体验</p>
-</div>
-
-## 🚀 学习框架
-
-<div class="frameworks-grid">
-  <div 
-    v-for="framework in frameworks" 
-    :key="framework.name"
-    class="framework-card"
-    :style="`--card-color: ${framework.color}`"
-  >
-    <div class="framework-header">
-      <span class="framework-icon">{{ framework.icon }}</span>
-      <h3 class="framework-name">{{ framework.name }}</h3>
-    </div>
-    <p class="framework-description">{{ framework.description }}</p>
-    <ul class="framework-features">
-      <li v-for="feature in framework.features" :key="feature">
-        {{ feature }}
-      </li>
-    </ul>
-    <div class="framework-meta">
-      <div class="meta-item">
-        <span class="meta-label">学习周期</span>
-        <span class="meta-value">{{ framework.duration }}</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">难度等级</span>
-        <span class="meta-value">{{ framework.difficulty }}</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-## 📚 学习路径
-
-<div class="learning-timeline">
-  <h2 class="timeline-title">循序渐进的学习计划</h2>
-  <div class="timeline-container">
-    <div v-for="(item, index) in learningPath" :key="index" class="timeline-item">
-      <div class="timeline-marker">{{ index + 1 }}</div>
-      <div class="timeline-content">
-        <h3 class="timeline-phase">{{ item.phase }}</h3>
-        <div class="timeline-duration">{{ item.weeks }}</div>
-        <p class="timeline-description">{{ item.content }}</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-## 🎯 核心技能树
-
-### Avalonia 技能要点
-- **C# 与 .NET 基础**：掌握面向对象编程
-- **XAML 界面设计**：声明式 UI 构建
-- **MVVM 架构模式**：数据绑定与命令模式
-- **跨平台部署**：Windows、macOS、Linux 发布
-
-### Flutter 技能要点
-- **Dart 语言基础**：异步编程、空安全
-- **Widget 体系**：StatelessWidget 与 StatefulWidget
-- **状态管理**：Provider、Riverpod、GetX
-- **平台集成**：原生功能调用、插件开发
-
-### 微信小程序技能要点
-- **小程序架构**：理解生命周期、组件化开发
-- **WXML 与 WXSS**：小程序专属标记语言
-- **云开发能力**：云函数、云数据库
-- **微信生态集成**：支付、分享、登录
-
-## 🛠️ 推荐工具与资源
-
-### 开发工具
-- **Avalonia**: Visual Studio / JetBrains Rider
-- **Flutter**: Android Studio / VS Code + Flutter 插件
-- **微信小程序**: 微信开发者工具
