@@ -48,6 +48,332 @@ const techStack = ref([
   { name: 'EF Core', icon: '🗄️', description: '对象关系映射框架', level: '数据访问' },
   { name: 'SQL', icon: '💾', description: '数据库', level: '数据存储' }
 ])
+
+// 添加每周学习任务数据
+const weeklyTasks = ref([
+  {
+    week: 1,
+    title: "C# 基础入门与环境搭建",
+    goal: "搭建好开发环境，掌握C#最基础的语法，能够编写简单的控制台应用程序。",
+    content: [
+      {
+        title: "写在前面",
+        items: ["阅读此部分，建立正确的学习心态。"]
+      },
+      {
+        title: "开发环境搭建",
+        items: [
+          "安装 .NET SDK",
+          "安装 Visual Studio 2022 (推荐，社区版免费) 或 VS Code (配合C#插件)。",
+          "创建并运行第一个 \"Hello World\" 控制台应用。"
+        ]
+      },
+      {
+        title: "基础语法",
+        items: [
+          "变量、数据类型 (int, string, bool, double 等)。",
+          "运算符 (算术、关系、逻辑)。",
+          "控制流 (if-else, switch, for, while, do-while)。",
+          "数组。",
+          "方法/函数的定义与调用。"
+        ]
+      }
+    ],
+    practice: [
+      "编写一个简单的计算器控制台程序。",
+      "编写一个'猜数字'游戏。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 2,
+    title: "C# 核心 - 面向对象编程 (OOP)",
+    goal: "深刻理解面向对象的思想，并能在C#中应用。这是未来构建复杂系统的基石。",
+    content: [
+      {
+        title: "面向对象",
+        items: [
+          "类 (Class) 与对象 (Object)。",
+          "封装 (Encapsulation): 字段、属性、访问修饰符 (public, private)。",
+          "继承 (Inheritance)。",
+          "多态 (Polymorphism): virtual, override, abstract。",
+          "接口 (Interface)。",
+          "构造函数 (Constructor)。",
+          "static 关键字。"
+        ]
+      }
+    ],
+    practice: [
+      "设计并实现一组类来模拟一个场景，例如\"学校\" (包含学生类、教师类、课程类)。",
+      "使用接口定义一个\"可攻击\"的行为，让\"战士\"和\"法师\"类都实现它。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 3,
+    title: "C# 实用特性 - 集合与LINQ",
+    goal: "掌握处理一组数据的常用方法，并学会使用LINQ高效地查询和操作数据。",
+    content: [
+      {
+        title: "集合",
+        items: [
+          "List<T>: 最常用的动态数组。",
+          "Dictionary<TKey, TValue>: 键值对集合。",
+          "了解 Array, Queue<T>, Stack<T> 等。"
+        ]
+      },
+      {
+        title: "LINQ (语言集成查询)",
+        items: [
+          "理解其核心思想：像查询数据库一样查询集合。",
+          "掌握常用方法: Where, Select, OrderBy, FirstOrDefault, ToList, Count, Any。",
+          "学习方法语法 (Method Syntax) 和查询语法 (Query Syntax)。"
+        ]
+      }
+    ],
+    practice: [
+      "创建一个学生列表 (List<Student>)，每个学生有ID、姓名、年龄、分数等属性。",
+      "使用LINQ完成以下查询：",
+      "- 找出所有分数及格的学生。",
+      "- 按年龄对学生进行排序。",
+      "- 只获取所有学生的名字列表。",
+      "- 找到第一个姓\"王\"的学生。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 4,
+    title: "C# 进阶与 WebAPI 初探",
+    goal: "接触C#的异步编程，并创建你的第一个ASP.NET Core WebAPI项目。",
+    content: [
+      {
+        title: "异步编程",
+        items: [
+          "理解为什么需要异步 (async/await)。",
+          "掌握 Task 和 Task<TResult>。",
+          "学习 async 和 await 关键字的用法。"
+        ]
+      },
+      {
+        title: "第一个WebAPI程序",
+        items: [
+          "使用 Visual Studio 创建一个新的 \"ASP.NET Core Web API\" 项目。",
+          "理解项目结构：Program.cs, Controllers 文件夹, appsettings.json。",
+          "运行项目，了解 Swagger UI 的作用。",
+          "尝试修改默认的 WeatherForecastController，添加一个新的API接口。"
+        ]
+      }
+    ],
+    practice: [
+      "将一个模拟耗时操作（如 Task.Delay）的同步方法改写为异步方法。",
+      "创建一个 TodoController，提供一个返回静态待办事项列表的GET接口。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 5,
+    title: "ASP.NET Core 核心机制",
+    goal: "深入理解ASP.NET Core的两个灵魂：中间件和依赖注入。",
+    content: [
+      {
+        title: "中间件 (Middleware)",
+        items: [
+          "理解请求管道 (Request Pipeline) 的概念。",
+          "学习 app.Use() 和 app.Run()。",
+          "尝试编写一个简单的自定义中间件（例如，记录请求耗时）。"
+        ]
+      },
+      {
+        title: "依赖注入 (DI - Dependency Injection)",
+        items: [
+          "理解为什么要使用DI (解耦)。",
+          "学习三种生命周期: Singleton, Scoped, Transient。",
+          "在 Program.cs 中注册服务，并在 Controller 中通过构造函数注入服务。"
+        ]
+      },
+      {
+        title: "路由 (Routing)",
+        items: [
+          "精通特性路由 (Attribute Routing) ([Route], [HttpGet], [HttpPost], etc.)。"
+        ]
+      }
+    ],
+    practice: [
+      "创建一个 LogService，通过DI注入到 TodoController 中，用来记录操作日志。",
+      "自定义一个中间件，用于在请求头中检查是否存在特定的 API-KEY。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 6,
+    title: "WebAPI 开发深化",
+    goal: "掌握WebAPI开发中的常见任务：配置、模型绑定与验证。",
+    content: [
+      {
+        title: "配置 (Configuration)",
+        items: [
+          "学习如何从 appsettings.json 读取配置信息。"
+        ]
+      },
+      {
+        title: "模型绑定 (Model Binding)",
+        items: [
+          "理解API如何自动将HTTP请求中的数据 (JSON body, query string, route data) 映射到C#方法的参数上。"
+        ]
+      },
+      {
+        title: "模型验证 (Model Validation)",
+        items: [
+          "使用数据注解 (Data Annotations) 如 [Required], [StringLength], [Range] 来验证输入模型。",
+          "理解 ModelState.IsValid 的作用。"
+        ]
+      },
+      {
+        title: "过滤器 (Filters)",
+        items: [
+          "初步了解Action Filter，可以用于处理一些横切关注点。"
+        ]
+      }
+    ],
+    practice: [
+      "为创建待办事项 (POST /api/todo) 的接口创建一个 CreateTodoDto 模型，并添加验证规则。",
+      "在接口方法中检查 ModelState，如果验证失败，返回 400 Bad Request。",
+      "将数据库连接字符串配置在 appsettings.json 中并读取。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 7,
+    title: "数据访问 - Entity Framework Core",
+    goal: "将数据库集成到你的WebAPI项目中，实现数据的持久化。",
+    content: [
+      {
+        title: "数据库基础",
+        items: [
+          "(如果需要，快速复习SQL基础)"
+        ]
+      },
+      {
+        title: "Entity Framework Core (EF Core)",
+        items: [
+          "安装 EF Core 相关的 NuGet 包。",
+          "Code-First 开发模式: 先写C#实体类，再由EF Core生成数据库。",
+          "创建 DbContext。",
+          "配置实体 (Entity) 和数据库连接。",
+          "迁移 (Migrations): 使用命令行工具 (dotnet ef) 创建和应用数据库迁移。",
+          "在服务中注入 DbContext 并执行基本的 CRUD (增删改查) 操作。"
+        ]
+      }
+    ],
+    practice: [
+      "为你的 Todo 应用创建 TodoItem 实体类。",
+      "创建 TodoDbContext。",
+      "使用 Migrations 在本地数据库 (如 SQL Server LocalDB 或 SQLite) 中生成 TodoItems 表。",
+      "重写 TodoController 中的所有接口，使其从操作静态列表改为操作数据库。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 8,
+    title: "实战项目启动与核心功能",
+    goal: "参照网站的实战项目，从零开始搭建一个结构更合理的项目，并实现核心业务功能。",
+    content: [
+      {
+        title: "实战项目",
+        items: [
+          "学习分层架构思想 (例如: Domain, Application, Infrastructure, API 四层)。",
+          "搭建项目结构，创建不同的类库项目。",
+          "设计并实现核心实体（如用户、文章、评论等）。",
+          "完成核心业务的CRUD接口开发。"
+        ]
+      },
+      {
+        title: "统一格式",
+        items: [
+          "统一异常处理: 使用中间件捕获全局异常，返回统一的错误信息。",
+          "统一返回格式: 封装一个通用的API响应类，让所有接口返回相同结构的JSON。"
+        ]
+      }
+    ],
+    practice: [
+      "按照分层思想，动手搭建一个简单的博客API项目。",
+      "实现文章 (Post) 的增、删、改、查系列接口。",
+      "添加全局异常处理中间件。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 9,
+    title: "项目功能完善 - 认证与授权",
+    goal: "为项目集成安全机制，保护你的API接口。",
+    content: [
+      {
+        title: "认证与授权 (Authentication & Authorization)",
+        items: [
+          "理解认证（你是谁）和授权（你能做什么）的区别。",
+          "学习 JWT (JSON Web Token) 的工作原理。",
+          "在项目中集成JWT：",
+          "- 用户注册/登录接口，登录成功后颁发Token。",
+          "- 配置JWT认证中间件。",
+          "- 在需要保护的接口上添加 [Authorize] 特性。"
+        ]
+      }
+    ],
+    practice: [
+      "为你的博客API项目添加用户注册和登录接口。",
+      "\"创建文章\"接口必须是登录用户才能访问。",
+      "\"删除文章\" 接口必须是文章作者本人才能访问（权限）。"
+    ],
+    expanded: false,
+    completed: false
+  },
+  {
+    week: 10,
+    title: "部署与总结",
+    goal: "学习如何将你的WebAPI应用部署到服务器上，并对整个学习过程进行回顾。",
+    content: [
+      {
+        title: "部署 (Deployment)",
+        items: [
+          "Docker 简介: 理解容器化的优势。",
+          "编写 Dockerfile 来容器化你的ASP.NET Core应用。",
+          "学习基本的 Docker 命令 (build, run, ps, stop)。",
+          "了解部署到 Linux 服务器的基本流程。"
+        ]
+      },
+      {
+        title: "总结",
+        items: [
+          "回顾这10周的学习内容，整理知识体系，形成自己的知识图谱。",
+          "思考下一步的学习方向（如：微服务、gRPC、Blazor、分布式系统等）。"
+        ]
+      }
+    ],
+    practice: [
+      "为你的博客API项目编写一个 Dockerfile。",
+      "在本地使用 Docker 构建镜像并运行容器。",
+      "通过 localhost:port 访问容器化的API，并用Postman等工具测试。"
+    ],
+    expanded: false,
+    completed: false
+  }
+])
+
+const toggleTask = (index) => {
+  weeklyTasks.value[index].expanded = !weeklyTasks.value[index].expanded
+}
+
+const toggleTaskCompletion = (index) => {
+  weeklyTasks.value[index].completed = !weeklyTasks.value[index].completed
+}
 </script>
 
 <style scoped>
@@ -550,6 +876,231 @@ const techStack = ref([
     justify-content: flex-start;
   } */
 }
+
+.weekly-tasks-section {
+  margin: 3rem 0;
+}
+
+.weekly-tasks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.weekly-task-card {
+  background: linear-gradient(135deg, var(--card-bg-gradient-start) 0%, var(--card-bg-gradient-end) 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.weekly-task-card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.dark .weekly-task-card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.weekly-task-header {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--card-border);
+  position: relative;
+}
+
+.weekly-task-header-content {
+  flex: 1;
+}
+
+.weekly-task-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.weekly-task-week {
+  background: #007bff;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.dark .weekly-task-week {
+  background: #63b3ed;
+  color: #1a202c;
+}
+
+.weekly-task-goal {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.weekly-task-toggle {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: rgba(0,123,255,0.1);
+  margin-left: 1rem;
+}
+
+.dark .weekly-task-toggle {
+  color: #63b3ed;
+  background: rgba(99,179,237,0.1);
+}
+
+.weekly-task-toggle:hover {
+  background: rgba(0,123,255,0.2);
+}
+
+.dark .weekly-task-toggle:hover {
+  background: rgba(99,179,237,0.2);
+}
+
+.weekly-task-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.weekly-task-content.expanded {
+  padding: 1.5rem;
+  max-height: 2000px; /* 足够大以适应内容 */
+}
+
+.weekly-task-section {
+  margin-bottom: 1.5rem;
+}
+
+.weekly-task-section:last-child {
+  margin-bottom: 0;
+}
+
+.weekly-task-section-title {
+  font-weight: 600;
+  color: #007bff;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.dark .weekly-task-section-title {
+  color: #63b3ed;
+}
+
+.weekly-task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weekly-task-list-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.weekly-task-list-item::before {
+  content: '•';
+  position: absolute;
+  left: 0.3rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.dark .weekly-task-list-item::before {
+  color: #63b3ed;
+}
+
+.weekly-task-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.content-group {
+  margin-bottom: 1.5rem;
+}
+
+.content-group:last-child {
+  margin-bottom: 0;
+}
+
+.content-group-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.7rem 0;
+}
+
+.weekly-task-status {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.weekly-task-status.completed {
+  background: var(--status-completed-bg);
+  color: var(--status-completed-text);
+}
+
+.weekly-task-status.pending {
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.weekly-task-status:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .weekly-task-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .weekly-task-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .weekly-task-status {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+}
 </style>
 
 <div class="hero-section">
@@ -671,7 +1222,68 @@ const techStack = ref([
   </div>
 </div>
 
-## 🚀 实战项目：个人博客管理系统
+<!-- 在正文适当位置添加每周任务组件 -->
+<div class="weekly-tasks-section">
+  <h2>📝 每周学习任务详情</h2>
+  
+  <div class="weekly-tasks-grid">
+    <div 
+      v-for="(task, index) in weeklyTasks" 
+      :key="index"
+      class="weekly-task-card"
+    >
+      <div class="weekly-task-header" @click="toggleTask(index)">
+        <div class="weekly-task-header-content">
+          <h3 class="weekly-task-title">
+            <span class="weekly-task-week">{{ task.week }}</span>
+            {{ task.title }}
+          </h3>
+          <p class="weekly-task-goal">{{ task.goal }}</p>
+        </div>
+        <div 
+          class="weekly-task-status" 
+          :class="task.completed ? 'completed' : 'pending'"
+          @click.stop="toggleTaskCompletion(index)"
+        >
+          {{ task.completed ? '✅ 已完成' : '🔄 进行中' }}
+        </div>
+        <div class="weekly-task-toggle">
+          <span v-if="!task.expanded">▼</span>
+          <span v-else>▲</span>
+        </div>
+      </div>
+      <div class="weekly-task-content" :class="{ expanded: task.expanded }">
+        <div class="weekly-task-section">
+          <h4 class="weekly-task-section-title">📚 学习内容</h4>
+          <div v-for="(section, sIndex) in task.content" :key="sIndex" class="content-group">
+            <h5 class="content-group-title">{{ section.title }}</h5>
+            <ul class="weekly-task-list">
+              <li 
+                v-for="(item, iIndex) in section.items" 
+                :key="iIndex"
+                class="weekly-task-list-item"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="weekly-task-section">
+          <h4 class="weekly-task-section-title">💻 实践任务</h4>
+          <ul class="weekly-task-list">
+            <li 
+              v-for="(practice, pIndex) in task.practice" 
+              :key="pIndex"
+              class="weekly-task-list-item"
+            >
+              {{ practice }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="project-showcase">
   <h2 class="project-title">🎯 综合实战项目</h2>
