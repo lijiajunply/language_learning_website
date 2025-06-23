@@ -8,15 +8,134 @@ description: 系统化的前端学习路径，从零基础到实战应用
 import { ref } from 'vue'
 
 const learningProgress = ref([
-  { phase: 'HTML基础', period: '5.24 - 6.1', completed: false, color: '#ff6b6b', darkColor: '#ff8a8a' },
-  { phase: 'CSS样式', period: '6.1 - 6.21', completed: false, color: '#4ecdc4', darkColor: '#5cdbd3' },
-  { phase: 'JavaScript', period: '6.22 - 暑假前', completed: false, color: '#45b7d1', darkColor: '#64c5e8' }
+  { phase: 'HTML基础', period: '第一周', task:'' , completed: false, color: '#ff6b6b', darkColor: '#ff8a8a' },
+  { phase: 'CSS样式', period: '第二周', task:'按照 Web基础学习/练习一 写一个个人简历网站' , completed: false, color: '#4ecdc4', darkColor: '#5cdbd3' },
+  { phase: 'JavaScript', period: '第三、四周', task:'按照 Web基础学习/综合项目一 写一个后台管理系统' , completed: false, color: '#45b7d1', darkColor: '#64c5e8' }
 ])
 
 const toggleProgress = (index) => {
   learningProgress.value[index].completed = !learningProgress.value[index].completed
 }
 </script>
+
+<div class="hero-section">
+  <h1 class="hero-title">🚀 前端学习计划</h1>
+  <p class="hero-subtitle">系统化学习HTML、CSS、JavaScript，踏上前端开发之路</p>
+</div>
+
+## 📚 学习资源
+
+<div class="resource-cards">
+  <div class="resource-card">
+    <h4>📖 主要学习资源</h4>
+    <ul>
+      <li><a href="https://www.w3school.com.cn/" target="_blank">W3School 中文教程</a> - 系统全面的前端基础教程</li>
+      <li><a href="https://note.youdao.com/ynoteshare/index.html?id=064133a2038f20eb8d4eaf07d25a0e3a&type=notebook&_time=1748014775160" target="_blank">李哥分享笔记</a> - 实战经验总结</li>
+      <li>💡 建议跟随文档学习，前端基础知识容易理解，比视频学习更高效</li>
+    </ul>
+  </div>
+
+  <div class="resource-card">
+    <h4>🛠️ 开发环境配置</h4>
+    <ul>
+      <li><a href="https://code.visualstudio.com/" target="_blank">下载 VS Code</a> - 强大的代码编辑器</li>
+      <li>📹 搜索"VS Code插件配置"视频完成环境搭建</li>
+      <li>🎯 配置完成后即可开始实战练习</li>
+      <li>💻 学习过程中务必动手实践操作</li>
+    </ul>
+  </div>
+</div>
+
+<div class="tips-box">
+  <h4>💡 学习建议</h4>
+  <p>前端学习重在实践！建议边学边做，每学完一个知识点就立即编写代码验证，这样能更深入地理解概念并培养编程思维。</p>
+</div>
+
+## 🎯 学习模块
+
+<div class="learning-modules">
+  <a href="/software/web-basic/html-basics.html">
+    <div class="module-card">
+      <h3>HTML</h3>
+      <p>网页结构基础</p>
+    </div>
+  </a>
+  <a href="/software/web-basic/css-basics.html">
+    <div class="module-card">
+      <h3>CSS</h3>
+      <p>样式与布局设计</p>
+    </div>
+  </a>
+  <a href="/software/web-basic/javascript-basics.html">
+    <div class="module-card">
+      <h3>JavaScript</h3>
+      <p>交互逻辑编程</p>
+    </div>
+  </a>
+
+  <div class="module-card">
+    <h3>Vue</h3>
+    <p>基本框架学习</p>
+  </div>
+  
+  <div class="module-card">
+    <h3>Tailwind</h3>
+    <p>其他框架学习</p>
+  </div>
+
+  <a href="/software/react-learn/general-outline.html">
+    <div class="module-card">
+      <h3>React</h3>
+      <p>其他框架学习</p>
+    </div>
+  </a>
+</div>
+
+## 📅 学习时间线
+
+<div class="timeline">
+  <div 
+    v-for="(item, index) in learningProgress" 
+    :key="index"
+    class="timeline-item"
+    @click="toggleProgress(index)"
+  >
+    <div class="timeline-content" :class="{ completed: item.completed }">
+      <div class="phase-header">
+        <div>
+          <h3 class="phase-title">{{ item.phase }}</h3>
+          <span class="phase-period">{{ item.period }}</span>
+        </div>
+        <span 
+          class="phase-status"
+          :class="item.completed ? 'status-completed' : 'status-pending'"
+        >
+          {{ item.completed ? '✅ 已完成' : '⏳ 进行中' }}
+        </span>
+      </div>
+      <div v-if="!item.completed" style="margin: 0.5rem 0 0 0; color: var(--text-secondary-light); transition: color 0.3s ease;">
+      <div>
+        {{ item.task }}
+      </div>
+      <div>
+        点击标记完成进度
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 🏆 学习目标
+
+::: tip 🎯 阶段目标
+在暑假开始前完成前端基础知识学习，为暑假期间的后端学习做好准备。掌握HTML页面结构、CSS样式设计、JavaScript交互编程三大核心技能。
+:::
+
+---
+
+<div class="footer-text">
+  <p>💪 坚持学习，持续进步！有问题随时在群里讨论交流。</p>
+</div>
 
 <style scoped>
 /* 基础变量定义 */
@@ -466,117 +585,3 @@ const toggleProgress = (index) => {
   background: var(--text-secondary-dark);
 }
 </style>
-
-<div class="hero-section">
-  <h1 class="hero-title">🚀 前端学习计划</h1>
-  <p class="hero-subtitle">系统化学习HTML、CSS、JavaScript，踏上前端开发之路</p>
-</div>
-
-## 📚 学习资源
-
-<div class="resource-cards">
-  <div class="resource-card">
-    <h4>📖 主要学习资源</h4>
-    <ul>
-      <li><a href="https://www.w3school.com.cn/" target="_blank">W3School 中文教程</a> - 系统全面的前端基础教程</li>
-      <li><a href="https://note.youdao.com/ynoteshare/index.html?id=064133a2038f20eb8d4eaf07d25a0e3a&type=notebook&_time=1748014775160" target="_blank">李哥分享笔记</a> - 实战经验总结</li>
-      <li>💡 建议跟随文档学习，前端基础知识容易理解，比视频学习更高效</li>
-    </ul>
-  </div>
-
-  <div class="resource-card">
-    <h4>🛠️ 开发环境配置</h4>
-    <ul>
-      <li><a href="https://code.visualstudio.com/" target="_blank">下载 VS Code</a> - 强大的代码编辑器</li>
-      <li>📹 搜索"VS Code插件配置"视频完成环境搭建</li>
-      <li>🎯 配置完成后即可开始实战练习</li>
-      <li>💻 学习过程中务必动手实践操作</li>
-    </ul>
-  </div>
-</div>
-
-<div class="tips-box">
-  <h4>💡 学习建议</h4>
-  <p>前端学习重在实践！建议边学边做，每学完一个知识点就立即编写代码验证，这样能更深入地理解概念并培养编程思维。</p>
-</div>
-
-## 🎯 学习模块
-
-<div class="learning-modules">
-  <a href="/software/web-basic/html-basics.html">
-    <div class="module-card">
-      <h3>HTML</h3>
-      <p>网页结构基础</p>
-    </div>
-  </a>
-  <a href="/software/web-basic/css-basics.html">
-    <div class="module-card">
-      <h3>CSS</h3>
-      <p>样式与布局设计</p>
-    </div>
-  </a>
-  <a href="/software/web-basic/javascript-basics.html">
-    <div class="module-card">
-      <h3>JavaScript</h3>
-      <p>交互逻辑编程</p>
-    </div>
-  </a>
-
-  <div class="module-card">
-    <h3>Vue</h3>
-    <p>基本框架学习</p>
-  </div>
-  
-  <div class="module-card">
-    <h3>Tailwind</h3>
-    <p>其他框架学习</p>
-  </div>
-
-  <a href="/software/react-learn/general-outline.html">
-    <div class="module-card">
-      <h3>React</h3>
-      <p>其他框架学习</p>
-    </div>
-  </a>
-</div>
-
-## 📅 学习时间线
-
-<div class="timeline">
-  <div 
-    v-for="(item, index) in learningProgress" 
-    :key="index"
-    class="timeline-item"
-    @click="toggleProgress(index)"
-  >
-    <div class="timeline-content" :class="{ completed: item.completed }">
-      <div class="phase-header">
-        <div>
-          <h3 class="phase-title">{{ item.phase }}</h3>
-          <span class="phase-period">{{ item.period }}</span>
-        </div>
-        <span 
-          class="phase-status"
-          :class="item.completed ? 'status-completed' : 'status-pending'"
-        >
-          {{ item.completed ? '✅ 已完成' : '⏳ 进行中' }}
-        </span>
-      </div>
-      <p v-if="!item.completed" style="margin: 0.5rem 0 0 0; color: var(--text-secondary-light); transition: color 0.3s ease;">
-        点击标记完成进度
-      </p>
-    </div>
-  </div>
-</div>
-
-## 🏆 学习目标
-
-::: tip 🎯 阶段目标
-在暑假开始前完成前端基础知识学习，为暑假期间的后端学习做好准备。掌握HTML页面结构、CSS样式设计、JavaScript交互编程三大核心技能。
-:::
-
----
-
-<div class="footer-text">
-  <p>💪 坚持学习，持续进步！有问题随时在群里讨论交流。</p>
-</div>
