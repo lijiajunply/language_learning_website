@@ -118,10 +118,11 @@ const learningPath = ref([
 .hero-section {
   text-align: center;
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, var(--vp-c-brand-light) 0%, var(--vp-c-brand) 100%);
+  background: linear-gradient(135deg,
+      var(--vp-c-brand-1) 0%,
+      var(--vp-c-brand-2) 100%);
   border-radius: 16px;
   margin-bottom: 3rem;
-  color: white;
 }
 
 .hero-title {
@@ -133,12 +134,19 @@ const learningPath = ref([
   -webkit-text-fill-color: transparent;
 }
 
+.dark .hero-section { 
+  background: linear-gradient(135deg, var(--vp-c-brand-dark) 0%, var(--vp-c-brand) 100%);
+}
+
 .hero-description {
   font-size: 1.25rem;
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
+  color: #f3f5f7;
 }
+
+
 
 .frameworks-grid {
   display: grid;

@@ -36,41 +36,36 @@
 
     <!-- 学习路径 -->
     <section class="roadmap-section">
-    <div class="container">
-      <h2 class="section-title">学习路径</h2>
-      <div style="font-size: 16px;text-align: center;margin-bottom: 2.5rem;">点击即可查看每周任务</div>
-      <div class="roadmap">
-        <div
-          class="roadmap-item"
-          v-for="(step, index) in learningPath"
-          :key="step.id"
-          @click="toggleTask(index)"
-        >
-          <div class="roadmap-marker">
-            <span v-if="!step.isChoose" class="step-number">{{ step.id }}</span>
-            <span v-else class="step-number">选学</span>
-          </div>
-          <div class="roadmap-content">
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.description }}</p>
-            <div class="topics">
-              <span v-for="topic in step.topics" :key="topic" class="topic-tag">
-                {{ topic }}
-              </span>
+      <div class="container">
+        <h2 class="section-title">学习路径</h2>
+        <div style="font-size: 16px;text-align: center;margin-bottom: 2.5rem;">点击即可查看每周任务</div>
+        <div class="roadmap">
+          <div class="roadmap-item" v-for="(step, index) in learningPath" :key="step.id" @click="toggleTask(index)">
+            <div class="roadmap-marker">
+              <span v-if="!step.isChoose" class="step-number">{{ step.id }}</span>
+              <span v-else class="step-number">选学</span>
             </div>
-            <div class="task-list" v-if="expandedIndex === index">
-              <h4>任务</h4>
-              <ul>
-                <li v-for="(task, taskIndex) in step.task" :key="taskIndex">
-                  {{ task }}
-                </li>
-              </ul>
+            <div class="roadmap-content">
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
+              <div class="topics">
+                <span v-for="topic in step.topics" :key="topic" class="topic-tag">
+                  {{ topic }}
+                </span>
+              </div>
+              <div class="task-list" v-if="expandedIndex === index">
+                <h4>任务</h4>
+                <ul>
+                  <li v-for="(task, taskIndex) in step.task" :key="taskIndex">
+                    {{ task }}
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
 </template>
 
