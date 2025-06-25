@@ -68,9 +68,22 @@ public class JDBCExample {
 }
 ```
 
+> [!TIP]
+> JDBC 需要使用各数据库的驱动，你需要配置一下 (这里展示的是MySql的)：
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.28</version>
+    </dependency>
+</dependencies>
+```
+
 ## 3. JDBC 优化技巧
 
-3.1 使用连接池
+### 使用连接池
 
 频繁创建和关闭数据库连接会消耗大量资源，使用连接池可以复用连接，提升性能。常见的连接池有：
 
@@ -105,7 +118,7 @@ public class HikariExample {
 }
 ```
 
-3.2 使用 PreparedStatement
+### 使用 PreparedStatement
 
 PreparedStatement 可以预编译 SQL 语句，提升性能并防止 SQL 注入。
 
@@ -120,7 +133,7 @@ try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 }
 ```
 
-3.3 批量处理
+### 批量处理
 
 对于大量数据操作，使用批量处理可以显著提升性能。
 
@@ -138,7 +151,7 @@ try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 }
 ```
 
-3.4 事务管理
+### 事务管理
 
 通过 Connection 对象管理事务，确保数据一致性。
 

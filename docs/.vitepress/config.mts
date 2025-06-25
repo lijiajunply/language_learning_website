@@ -251,7 +251,7 @@ export default withMermaid({
                         { text: 'ORM概念', link: '/software/javaorm-learn/orm' },
                         { text: '数据库访问技术速览与比较', link: '/software/javaorm-learn/quick-and-comparison-of-database-access-technology' },
                         { text: 'JDBC', link: '/software/javaorm-learn/jdbc' },
-                        { text: 'hibernate', link: '/software/javaorm-learn/hibernate' },
+                        { text: 'Hibernate', link: '/software/javaorm-learn/hibernate' },
                         { text: '深入理解 MyBatis', link: '/software/javaorm-learn/mybatis' },
                         { text: '你应该知道的 JPA', link: '/software/javaorm-learn/jpa' },
                         { text: 'Repository模式理论&实现', link: '/software/javaorm-learn/repository' },
