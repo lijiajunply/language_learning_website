@@ -37,10 +37,10 @@
           </div>
 
           <div class="path-grid">
-            <div class="path-category" v-for="topic in learningTopics" :key="topic.id">
+            <a class="path-category" :href="topic.url" v-for="topic in learningTopics" :key="topic.id">
               <div class="category-icon">{{ topic.icon }}</div>
               <h4>{{ topic.name }}</h4>
-            </div>
+            </a>
           </div>
 
           <div class="advanced-resources">
@@ -149,10 +149,10 @@ import { ref } from 'vue'
 const learningTopics = ref([
   { id: 1, name: '数组和字符串', icon: '📝' },
   { id: 2, name: '链表', icon: '🔗' },
-  { id: 3, name: '队列 & 栈', icon: '📚' },
+  { id: 3, name: '队列 & 栈', icon: '📚',url: '/software/algorithm-learning/stacks-queues' },
   { id: 4, name: '哈希表', icon: '🗂️' },
   { id: 5, name: '查找表类算法', icon: '🔍' },
-  { id: 6, name: '二分查找', icon: '⚡' },
+  { id: 6, name: '二分查找', icon: '⚡', url: '/software/algorithm-learning/dichotomy' },
   { id: 7, name: '二叉树', icon: '🌳' },
   { id: 8, name: '二叉搜索树', icon: '🌲' },
   { id: 9, name: '前缀树', icon: '🎋' },
@@ -206,6 +206,7 @@ const advancedSites = ref([
   --border-color: #38383A;
   --shadow-light: 0 2px 16px rgba(0, 0, 0, 0.3);
   --shadow-medium: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --border-radius: 12px;
 }
 
 /* Base styles */
@@ -649,7 +650,7 @@ const advancedSites = ref([
   background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(52, 199, 89, 0.05));
   border: 1px solid rgba(52, 199, 89, 0.2);
   padding: 1.5rem;
-  border-radius: var(--border-radius);
+  border-radius: 0.75rem;
 }
 
 .tip-icon {
