@@ -8,6 +8,7 @@ import { useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import './style.css'
 import AppLearnPlan from '../components/AppLearnPlan.vue'
+import Algorithm from '../components/Algorithm.vue'
 
 export default {
   extends: DefaultTheme,
@@ -20,6 +21,7 @@ export default {
     // ...
      app.component('SpringOverview', SpringOverview)
      app.component('AppLearnPlan', AppLearnPlan)
+     app.component('Algorithm', Algorithm)
   },
   setup() {
     const route = useRoute() 
