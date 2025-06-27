@@ -5,7 +5,7 @@
             <h1 class="hero-title">
                 <span class="gradient-text">软件部学习计划</span>
             </h1>
-            <br/>
+            <br />
             <p class="hero-subtitle">开启你的编程学习之旅</p>
         </div>
 
@@ -25,8 +25,7 @@
                 <div class="card-content">
                     <div class="link-group">
                         <span class="link-label">学习计划和教程：</span>
-                        <a href="/software/front-end-learning-plan.html" target="_blank"
-                            class="resource-link">
+                        <a href="/software/front-end-learning-plan.html" target="_blank" class="resource-link">
                             查看教程 →
                         </a>
                     </div>
@@ -61,8 +60,7 @@
                         </h3>
                         <div class="link-group">
                             <span class="link-label">学习计划和教程：</span>
-                            <a href="/software/spring-learn/start.html" target="_blank"
-                                class="resource-link">
+                            <a href="/software/spring-learn/start.html" target="_blank" class="resource-link">
                                 Spring教程 →
                             </a>
                         </div>
@@ -81,8 +79,7 @@
                         </h3>
                         <div class="link-group">
                             <span class="link-label">学习计划和教程：</span>
-                            <a href="/software/aspnetcore-learn/start.html" target="_blank"
-                                class="resource-link">
+                            <a href="/software/aspnetcore-learn/start.html" target="_blank" class="resource-link">
                                 ASP.NET Core教程 →
                             </a>
                         </div>
@@ -111,8 +108,7 @@
                 <div class="card-content">
                     <div class="link-group">
                         <span class="link-label">学习计划和教程：</span>
-                        <a href="/software/app-development-learning-plan.html" target="_blank"
-                            class="resource-link">
+                        <a href="/software/app-development-learning-plan.html" target="_blank" class="resource-link">
                             查看教程 →
                         </a>
                     </div>
@@ -131,7 +127,11 @@
             <div class="info-card">
                 <h3>📝 提交方式</h3>
                 <p>实践任务的提交方式为，在仓库中开分支/Fork一个，然后在上面提交即可（不要破坏主分支）。</p>
-
+                <div class="language-bash vp-adaptive-theme"><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> clone</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 地址</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> &gt;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> checkout</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -b</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> your-branch-name</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> # 创建分支</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> .</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> commit</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> "your commit message"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> ## 写上你这次提交的信息。如果本阶段任务全部完成了，写上第n阶段完成。</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> push</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> origin</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> your-branch-name</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> # 上传指令</span></span></code></pre></div>
                 <div class="tips-section">
                     <h3>💡 学习提示</h3>
                     <ul>

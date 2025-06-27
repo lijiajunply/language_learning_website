@@ -1,512 +1,498 @@
 <template>
-  <div class="algorithm-guide">
-    <!-- Hero Section -->
-    <div class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">算法学习计划</h1>
-        <p class="hero-subtitle">系统化的算法学习路径与资源指南</p>
+  <div class="algorithm-learning-container">
+    <!-- 页面标题 -->
+    <header class="page-header">
+      <h1 class="main-title">
+        算法学习计划
+      </h1>
+      <p class="subtitle">系统化的算法学习路径与资源整合</p>
+    </header>
+
+    <!-- 学习路线部分 -->
+    <section class="content-section">
+      <h2 class="section-title">
+        <span class="section-icon">🎯</span>
+        学习路线
+      </h2>
+
+      <div class="info-card">
+        <p class="prerequisite">
+          学习算法前需要掌握一门编程语言（C++、C、Java、Python、Go 等语言均可）
+        </p>
       </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="content-wrapper">
-      <!-- Learning Path Section -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">学习路线</h2>
-        </div>
-        
-        <div class="card">
-          <div class="card-header">
-            <h3>前置要求</h3>
-          </div>
-          <p class="requirement-text">
-            学习算法前需要掌握一门编程语言（C++、C、Java、Python、Go等语言均可）
-          </p>
-        </div>
-
-        <div class="learning-path">
-          <div class="path-item foundation">
-            <div class="path-icon">📚</div>
-            <div class="path-content">
-              <h4>算法基础理论和复杂度分析</h4>
-              <a href="https://www.bilibili.com/video/BV1nJ411V7bd" target="_blank" class="path-link">
-                观看视频教程 →
-              </a>
-            </div>
-          </div>
-
-          <div class="path-grid">
-            <a class="path-category" :href="topic.url" v-for="topic in learningTopics" :key="topic.id">
-              <div class="category-icon">{{ topic.icon }}</div>
-              <h4>{{ topic.name }}</h4>
+      <div class="learning-path">
+        <div class="path-item">
+          <span class="path-number">1</span>
+          <div class="path-content">
+            <h3>算法基础理论和复杂度分析</h3>
+            <a href="https://www.bilibili.com/video/BV1nJ411V7bd" target="_blank" class="resource-link">
+              📺 B站视频教程
             </a>
           </div>
-
-          <div class="advanced-resources">
-            <h4>进阶学习</h4>
-            <div class="resource-links">
-              <a href="https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/" 
-                 target="_blank" class="resource-link">
-                <span class="link-text">初级算法</span>
-                <span class="link-arrow">→</span>
-              </a>
-              <a href="https://leetcode-cn.com/leetbook/detail/top-interview-questions-medium/" 
-                 target="_blank" class="resource-link">
-                <span class="link-text">中级算法</span>
-                <span class="link-arrow">→</span>
-              </a>
-            </div>
-            <p class="note">学习顺序并不唯一，可以在B站找资源来了解。</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Practice Websites Section -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">刷题网站</h2>
         </div>
 
-        <div class="websites-grid">
-          <div class="website-category">
-            <h3 class="category-title">入门推荐</h3>
-            <p class="category-desc">适合初学者，简单题较多</p>
-            <div class="website-list">
-              <a v-for="site in beginnerSites" :key="site.name" 
-                 :href="site.url" target="_blank" class="website-card beginner">
-                <div class="website-info">
-                  <h4>{{ site.name }}</h4>
-                  <p>{{ site.description }}</p>
-                </div>
-                <div class="website-arrow">→</div>
-              </a>
-            </div>
-          </div>
-
-          <div class="website-category">
-            <h3 class="category-title">进阶挑战</h3>
-            <p class="category-desc">难度偏大，适合提高</p>
-            <div class="website-list">
-              <a v-for="site in advancedSites" :key="site.name" 
-                 :href="site.url" target="_blank" class="website-card advanced">
-                <div class="website-info">
-                  <h4>{{ site.name }}</h4>
-                  <p>{{ site.description }}</p>
-                </div>
-                <div class="website-arrow">→</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Resources Section -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">资料网站</h2>
-        </div>
-
-        <div class="resources-grid">
-          <div class="resource-card featured">
-            <div class="resource-icon">📖</div>
-            <div class="resource-content">
-              <h3>代码随想录</h3>
-              <p>涵盖基础算法中的大部分内容，系统化学习首选</p>
-              <a href="https://programmercarl.com/qita/publish.html" target="_blank" class="resource-btn">
-                开始学习
-              </a>
-            </div>
-          </div>
-
-          <div class="resource-card">
-            <div class="resource-icon">💻</div>
-            <div class="resource-content">
-              <h3>CSDN</h3>
-              <p>搜索未学算法，完善知识储备的好去处</p>
-              <a href="https://www.csdn.net/" target="_blank" class="resource-btn secondary">
-                访问网站
-              </a>
-            </div>
+        <div class="path-grid">
+          <div class="path-card" v-for="(plan, index) in learningPlans" :key="index">
+            <h4>{{ plan.text }}</h4>
+            <ul class="topic-list">
+              <li v-for="topic in plan.content">
+                <span v-if="!topic.link">{{ topic.text }}</span>
+                <a v-else :href="topic.link" class="internal-link">{{ topic.text }}</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="tip-card">
-          <div class="tip-icon">💡</div>
-          <div class="tip-content">
-            <h4>学习建议</h4>
-            <p>其余算法可在刷题过程中看题解，未学到的算法可在CSDN中进行搜索来完善知识储备。</p>
+        <div class="difficulty-levels">
+          <a href="https://leetcode-cn.com/leetbook/detail/top-interview-questions-easy/" target="_blank"
+            class="difficulty-link easy">
+            <span class="difficulty-icon">🌱</span>
+            初级算法
+          </a>
+          <a href="https://leetcode-cn.com/leetbook/detail/top-interview-questions-medium/" target="_blank"
+            class="difficulty-link medium">
+            <span class="difficulty-icon">🌿</span>
+            中级算法
+          </a>
+        </div>
+
+        <p class="note">
+          💡 学习顺序并不唯一，可以在B站找资源来了解
+        </p>
+      </div>
+    </section>
+
+    <!-- 刷题网站部分 -->
+    <section class="content-section">
+      <h2 class="section-title">
+        <span class="section-icon">💻</span>
+        刷题网站
+      </h2>
+
+      <div class="websites-container">
+        <div class="website-group">
+          <h3 class="group-title">入门推荐</h3>
+          <p class="group-desc">简单题较多，适合初学者</p>
+          <div class="website-cards">
+            <a href="https://www.luogu.com.cn/" target="_blank" class="website-card beginner">
+              <div class="website-icon">🟢</div>
+              <h4>洛谷</h4>
+              <span class="website-url">luogu.com.cn</span>
+            </a>
+            <a href="https://leetcode.cn/" target="_blank" class="website-card beginner">
+              <div class="website-icon">🟡</div>
+              <h4>力扣</h4>
+              <span class="website-url">leetcode.cn</span>
+            </a>
+            <a href="https://www.lanqiao.cn/problems/?first_category_id=1" target="_blank"
+              class="website-card beginner">
+              <div class="website-icon">🔵</div>
+              <h4>蓝桥题库</h4>
+              <span class="website-url">lanqiao.cn</span>
+            </a>
           </div>
         </div>
-      </section>
-    </div>
+
+        <div class="website-group">
+          <h3 class="group-title">进阶挑战</h3>
+          <p class="group-desc">难度偏大，适合进阶学习</p>
+          <div class="website-cards">
+            <a href="https://ac.nowcoder.com/" target="_blank" class="website-card advanced">
+              <div class="website-icon">🟣</div>
+              <h4>牛客</h4>
+              <span class="website-url">nowcoder.com</span>
+            </a>
+            <a href="https://www.acwing.com/" target="_blank" class="website-card advanced">
+              <div class="website-icon">🟠</div>
+              <h4>AcWing</h4>
+              <span class="website-url">acwing.com</span>
+            </a>
+            <a href="https://atcoder.jp/" target="_blank" class="website-card advanced">
+              <div class="website-icon">⚫</div>
+              <h4>AtCoder</h4>
+              <span class="website-url">atcoder.jp</span>
+            </a>
+            <a href="https://codeforces.com/" target="_blank" class="website-card advanced">
+              <div class="website-icon">🔴</div>
+              <h4>Codeforces</h4>
+              <span class="website-url">codeforces.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 资料网站部分 -->
+    <section class="content-section">
+      <h2 class="section-title">
+        <span class="section-icon">📖</span>
+        资料网站
+      </h2>
+
+      <div class="resources-container">
+        <div class="resource-card">
+          <h3>
+            <a href="https://programmercarl.com/qita/publish.html" target="_blank" class="resource-title-link">
+              代码随想录
+            </a>
+          </h3>
+          <p class="resource-desc">
+            涵盖基础算法中的大部分内容，系统化的算法学习资料
+          </p>
+          <div class="resource-tags">
+            <span class="tag">基础算法</span>
+            <span class="tag">系统学习</span>
+          </div>
+        </div>
+
+        <div class="resource-card">
+          <h3>
+            <a href="https://www.csdn.net/" target="_blank" class="resource-title-link">
+              CSDN
+            </a>
+          </h3>
+          <p class="resource-desc">
+            专业开发者社区，可搜索未学到的算法来完善知识储备
+          </p>
+          <div class="resource-tags">
+            <span class="tag">技术社区</span>
+            <span class="tag">问题解答</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips-box">
+        <h4>💡 学习建议</h4>
+        <p>在刷题过程中遇到不会的算法，可以查看题解学习。未学到的算法可在 CSDN 中搜索相关资料来完善知识储备。</p>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const learningTopics = ref([
-  { id: 1, name: '数组和字符串', icon: '📝' },
-  { id: 2, name: '链表', icon: '🔗' },
-  { id: 3, name: '队列 & 栈', icon: '📚',url: '/software/algorithm-learning/stacks-queues' },
-  { id: 4, name: '哈希表', icon: '🗂️' },
-  { id: 5, name: '查找表类算法', icon: '🔍' },
-  { id: 6, name: '二分查找', icon: '⚡', url: '/software/algorithm-learning/dichotomy' },
-  { id: 7, name: '二叉树', icon: '🌳' },
-  { id: 8, name: '二叉搜索树', icon: '🌲' },
-  { id: 9, name: '前缀树', icon: '🎋' },
-  { id: 10, name: 'N 叉树', icon: '🌿' },
-  { id: 11, name: '数组类算法', icon: '📊' },
-  { id: 12, name: '递归', icon: '🔄' },
-  { id: 13, name: '动态规划', icon: '⚙️' }
-])
-
-const beginnerSites = ref([
-  { name: '洛谷', url: 'https://www.luogu.com.cn/', description: '中文编程竞赛平台' },
-  { name: '力扣', url: 'https://leetcode.cn/', description: '全球极客挚爱的技术成长平台' },
-  { name: '蓝桥题库', url: 'https://www.lanqiao.cn/problems/?first_category_id=1', description: '蓝桥杯官方题库' }
-])
-
-const advancedSites = ref([
-  { name: '牛客', url: 'https://ac.nowcoder.com/', description: '信息学编程算法训练平台' },
-  { name: 'AcWing', url: 'https://www.acwing.com/', description: '快乐学习生活，尽在AcWing' },
-  { name: 'AtCoder', url: 'https://atcoder.jp/', description: '日本编程竞赛平台' },
-  { name: 'Codeforces', url: 'https://codeforces.com/', description: '国际编程竞赛平台' }
-])
+const learningPlans = [
+  {
+    text: '基础数据结构',
+    content: [
+      {
+        text: '链表',
+      },
+      {
+        text: '队列 & 栈',
+        link: '/software/algorithm-learning/stacks-queues'
+      },
+      {
+        text: '哈希表',
+      },
+    ]
+  },
+  {
+    text: '查找和树',
+    content: [
+      {
+        text: '查找表类算法',
+      },
+      {
+        text: '二分查找',
+        link: '/software/algorithm-learning/dichotomy'
+      },
+      {
+        text: '二叉树',
+      },
+      {
+        text: '二叉搜索树'
+      },
+      {
+        text: '前缀树'
+      },
+      {
+        text: 'N 叉树'
+      }
+    ]
+  },
+  {
+    text: '其他',
+    content: [
+      {
+        text: '数组类算法',
+      },
+      {
+        text: '递归',
+      },
+      {
+        text: '动态规划',
+      },
+    ]
+  }
+]
 </script>
 
 <style scoped>
-/* Variables */
-:root {
-  --primary-color: #007AFF;
-  --secondary-color: #5856D6;
-  --success-color: #34C759;
-  --warning-color: #FF9500;
-  --danger-color: #FF3B30;
-  --text-primary: #1D1D1F;
-  --text-secondary: #6E6E73;
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F2F2F7;
-  --bg-tertiary: #FFFFFF;
-  --border-color: #D1D1D6;
-  --shadow-light: 0 2px 16px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 4px 24px rgba(0, 0, 0, 0.1);
-  --border-radius: 12px;
-  --border-radius-large: 16px;
-}
-
-/* Dark mode variables */
-.dark {
-  --text-primary: #F2F2F7;
-  --text-secondary: #98989D;
-  --bg-primary: #000000;
-  --bg-secondary: #1C1C1E;
-  --bg-tertiary: #2C2C2E;
-  --border-color: #38383A;
-  --shadow-light: 0 2px 16px rgba(0, 0, 0, 0.3);
-  --shadow-medium: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --border-radius: 12px;
-}
-
-/* Base styles */
-.algorithm-guide {
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  min-height: 100vh;
-  transition: all 0.3s ease;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: 4rem 2rem 6rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0 0 1rem;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  color: var(--text-secondary);
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-/* Content Wrapper */
-.content-wrapper {
+/* 基础样式和CSS变量 */
+.algorithm-learning-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
-  transform: translateY(-2rem);
-  position: relative;
-  z-index: 2;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-/* Section Styles */
-.section {
-  margin-bottom: 4rem;
-}
-
-.section-header {
+/* 页面标题样式 */
+.page-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.main-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-icon {
+  font-size: 0.9em;
+  margin-right: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--vp-c-text-2);
+  font-weight: 300;
+}
+
+/* 内容区块样式 */
+.content-section {
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-size: 1.75rem;
   font-weight: 700;
-  color: var(--text-primary);
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-/* Card Styles */
-.card {
-  background: var(--bg-tertiary);
-  border-radius: var(--border-radius-large);
-  padding: 2rem;
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--border-color);
   margin-bottom: 2rem;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.card:hover {
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-2px);
+.section-icon {
+  font-size: 1.5rem;
 }
 
-.card-header h3 {
-  font-size: 1.375rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 1rem;
+/* 信息卡片 */
+.info-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.requirement-text {
-  font-size: 1.125rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+.prerequisite {
+  font-size: 1.1rem;
+  color: var(--vp-c-text-1);
   margin: 0;
 }
 
-/* Learning Path Styles */
+/* 学习路径样式 */
 .learning-path {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  position: relative;
 }
 
 .path-item {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
-  background: var(--bg-tertiary);
-  padding: 2rem;
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  align-items: flex-start;
 }
 
-.path-item:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
-}
-
-.path-icon {
-  font-size: 2.5rem;
+.path-number {
   flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.path-content h4 {
+.path-content h3 {
+  margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 0.5rem;
 }
 
-.path-link {
-  color: var(--primary-color);
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--vp-c-brand);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
-.path-link:hover {
-  opacity: 0.8;
+.resource-link:hover {
+  color: var(--vp-c-brand-dark);
+  transform: translateX(5px);
 }
 
-/* Path Grid */
+/* 路径网格 */
 .path-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.path-category {
-  background: var(--bg-tertiary);
+.path-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
   padding: 1.5rem;
-  border-radius: var(--border-radius);
-  text-align: center;
-  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
-.path-category:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-light);
+.path-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
 }
 
-.category-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+.path-card h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: var(--vp-c-brand);
 }
 
-.path-category h4 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-primary);
+.topic-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  line-height: 1.4;
 }
 
-/* Advanced Resources */
-.advanced-resources {
-  background: var(--bg-tertiary);
-  padding: 2rem;
-  border-radius: var(--border-radius-large);
-  border: 1px solid var(--border-color);
+.topic-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--vp-c-text-2);
 }
 
-.advanced-resources h4 {
-  font-size: 1.375rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 1.5rem;
+.topic-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--vp-c-brand);
 }
 
-.resource-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.resource-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
+.internal-link {
+  color: var(--vp-c-brand);
   text-decoration: none;
-  color: var(--text-primary);
-  transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
-}
-
-.resource-link:hover {
-  transform: translateX(8px);
-  background: var(--primary-color);
-  color: white;
-}
-
-.link-text {
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.link-arrow {
-  font-weight: 600;
-  transition: transform 0.3s ease;
+.internal-link:hover {
+  color: var(--vp-c-brand-dark);
+  text-decoration: underline;
 }
 
-.resource-link:hover .link-arrow {
-  transform: translateX(4px);
+/* 难度等级 */
+.difficulty-levels {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.difficulty-link {
+  flex: 1;
+  min-width: 200px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.difficulty-link.easy {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: #1a5f3f;
+}
+
+.difficulty-link.medium {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: #7a3f00;
+}
+
+.difficulty-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.difficulty-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .note {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  font-style: italic;
-  margin: 0;
-  line-height: 1.5;
+  background: var(--vp-c-bg-soft);
+  border-left: 4px solid var(--vp-c-brand);
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  color: var(--vp-c-text-2);
 }
 
-/* Websites Grid */
-.websites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+/* 网站卡片 */
+.websites-container {
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
 
-.website-category {
-  background: var(--bg-tertiary);
+.website-group {
+  background: var(--vp-c-bg-soft);
+  border-radius: 16px;
   padding: 2rem;
-  border-radius: var(--border-radius-large);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-light);
+  border: 1px solid var(--vp-c-divider);
 }
 
-.category-title {
+.group-title {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--vp-c-text-1);
 }
 
-.category-desc {
-  color: var(--text-secondary);
-  margin: 0 0 1.5rem;
-  line-height: 1.5;
+.group-desc {
+  color: var(--vp-c-text-2);
+  margin-bottom: 1.5rem;
 }
 
-.website-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.website-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 .website-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem;
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
+  background: var(--vp-c-bg);
+  border: 2px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
@@ -515,58 +501,50 @@ const advancedSites = ref([
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 .website-card:hover::before {
-  left: 100%;
+  transform: translateY(0);
 }
 
 .website-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-medium);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
 }
 
-.website-card.beginner:hover {
-  border-color: var(--success-color);
+.beginner {
+  background: var(--vp-c-brand-soft);
 }
 
-.website-card.advanced:hover {
-  border-color: var(--warning-color);
+.advanced {
+  background: var(--vp-c-gray-soft);
 }
 
-.website-info h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 0.25rem;
+.website-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.website-info p {
+.website-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--vp-c-text-1);
+}
+
+.website-url {
   font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.4;
+  color: var(--vp-c-text-3);
 }
 
-.website-arrow {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-}
-
-.website-card:hover .website-arrow {
-  color: var(--primary-color);
-  transform: translateX(4px);
-}
-
-/* Resources Grid */
-.resources-grid {
+/* 资源卡片 */
+.resources-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -574,200 +552,178 @@ const advancedSites = ref([
 }
 
 .resource-card {
-  background: var(--bg-tertiary);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
   padding: 2rem;
-  border-radius: var(--border-radius-large);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-light);
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .resource-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-medium);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
 }
 
-.resource-card.featured {
-  border-color: var(--primary-color);
-  background: linear-gradient(135deg, var(--bg-tertiary), rgba(0, 122, 255, 0.05));
-}
-
-.resource-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.resource-content h3 {
-  font-size: 1.375rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 0.75rem;
-}
-
-.resource-content p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0 0 1.5rem;
-}
-
-.resource-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  background: var(--primary-color);
-  color: white;
+.resource-title-link {
+  color: var(--vp-c-text-1);
   text-decoration: none;
-  border-radius: var(--border-radius);
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.resource-btn:hover {
-  background: color-mix(in srgb, var(--primary-color) 90%, black);
-  transform: translateY(-1px);
+.resource-title-link:hover {
+  color: var(--vp-c-brand);
 }
 
-.resource-btn.secondary {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
+.resource-desc {
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
-.resource-btn.secondary:hover {
-  background: var(--border-color);
-}
-
-/* Tip Card */
-.tip-card {
+.resource-tags {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(52, 199, 89, 0.05));
-  border: 1px solid rgba(52, 199, 89, 0.2);
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.tips-box {
+  background: linear-gradient(135deg, var(--vp-c-brand-soft) 0%, var(--vp-c-bg-soft) 100%);
+  border: 1px solid var(--vp-c-brand);
+  border-radius: 12px;
   padding: 1.5rem;
-  border-radius: 0.75rem;
+  margin-top: 2rem;
 }
 
-.tip-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
+.tips-box h4 {
+  margin: 0 0 0.75rem 0;
+  color: var(--vp-c-brand);
+  font-size: 1.2rem;
 }
 
-.tip-content h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 0.5rem;
-}
-
-.tip-content p {
-  color: var(--text-secondary);
+.tips-box p {
   margin: 0;
+  color: var(--vp-c-text-2);
   line-height: 1.6;
 }
 
-/* Mobile Responsive */
+/* 动画 */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
-  .content-wrapper {
-    padding: 0 1rem;
+  .algorithm-learning-container {
+    padding: 1.5rem 1rem;
   }
-  
-  .hero {
-    padding: 3rem 1rem 4rem;
+
+  .main-title {
+    font-size: 2rem;
   }
-  
-  .websites-grid {
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .path-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
-  
-  .website-category {
+
+  .difficulty-levels {
+    flex-direction: column;
+  }
+
+  .difficulty-link {
+    min-width: auto;
+  }
+
+  .website-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-container {
+    grid-template-columns: 1fr;
+  }
+
+  .website-group {
     padding: 1.5rem;
   }
-  
-  .path-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-  
+
   .path-item {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 1rem;
   }
-  
-  .card,
-  .resource-card,
-  .advanced-resources {
-    padding: 1.5rem;
-  }
-  
-  .resources-grid {
-    grid-template-columns: 1fr;
+
+  .path-content {
+    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  .content-wrapper {
-    padding: 0 0.75rem;
-  }
-  
-  .section {
-    margin-bottom: 3rem;
-  }
-  
-  .path-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .resource-links {
-    gap: 0.75rem;
-  }
-  
-  .website-card {
-    padding: 1rem;
-  }
+/* 暗黑模式支持 */
+.dark .path-card {
+  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-divider);
 }
 
-/* Animation for smooth scroll */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+.dark .website-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Focus states for accessibility */
-.resource-link:focus,
-.website-card:focus,
-.resource-btn:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+.dark .resource-card {
+  background: var(--vp-c-bg-soft);
 }
 
-/* Print styles */
-@media print {
-  .hero {
-    background: none !important;
-    color: black !important;
-    padding: 1rem 0;
-  }
-  
-  .hero-title,
-  .hero-subtitle {
-    color: black !important;
-  }
-  
-  .card,
-  .resource-card,
-  .website-card {
-    box-shadow: none !important;
-    border: 1px solid #ccc !important;
-    break-inside: avoid;
-  }
+.dark .tips-box {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, var(--vp-c-bg-soft) 100%);
+}
+
+.dark .difficulty-link.easy {
+  background: linear-gradient(135deg, rgba(132, 250, 176, 0.2) 0%, rgba(143, 211, 244, 0.2) 100%);
+  color: #84fab0;
+}
+
+.dark .difficulty-link.medium {
+  background: linear-gradient(135deg, rgba(250, 112, 154, 0.2) 0%, rgba(254, 225, 64, 0.2) 100%);
+  color: #fee140;
+}
+
+/* 平滑过渡 */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 </style>
