@@ -16,6 +16,9 @@ const members = [
     title: 'Creator',
     links: [
       { icon: 'github', link: 'https://github.com/lijiajunply' },
+      { icon: 'gitee', link: 'https://gitee.com/luckyfishisdashen' },
+      { icon: 'zhihu', link: 'https://www.zhihu.com/people/peopleintheworld' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/8911949' }
     ]
   },
   {
@@ -23,7 +26,7 @@ const members = [
     name: '张帅',
     title: 'Creator',
     links: [
-      { icon: 'github', link: 'https://gitee.com/zs18031751980' },
+      { icon: 'gitee', link: 'https://gitee.com/zs18031751980' },
     ]
   },
   {
@@ -31,7 +34,7 @@ const members = [
     name: '黄彦淇',
     title: 'Creator',
     links: [
-      { icon: 'github', link: 'https://gitee.com/huang15963' },
+      { icon: 'gitee', link: 'https://gitee.com/huang15963' },
     ]
   },
   {

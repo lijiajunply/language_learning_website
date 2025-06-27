@@ -1,12 +1,13 @@
 <template>
   <div class="algorithm-learning-container">
     <!-- 页面标题 -->
-    <header class="page-header">
-      <h1 class="main-title">
-        算法学习计划
+    <div class="hero-section">
+      <h1 class="hero-title">
+        <span class="gradient-text">算法学习计划</span>
       </h1>
-      <p class="subtitle">系统化的算法学习路径与资源整合</p>
-    </header>
+      <br />
+      <p class="hero-subtitle">系统化的算法学习路径与资源整合</p>
+    </div>
 
     <!-- 学习路线部分 -->
     <section class="content-section">
@@ -238,31 +239,32 @@ const learningPlans = [
 }
 
 /* 页面标题样式 */
-.page-header {
-  text-align: center;
-  margin-bottom: 4rem;
-  animation: fadeInDown 0.6s ease-out;
+.hero-section {
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 0.8s ease-out;
 }
 
-.main-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    font-weight: 800;
 }
 
-.title-icon {
-  font-size: 0.9em;
-  margin-right: 0.5rem;
+.gradient-text {
+    background: linear-gradient(120deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
 }
 
-.subtitle {
-  font-size: 1.25rem;
-  color: var(--vp-c-text-2);
-  font-weight: 300;
+.hero-subtitle {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--vp-c-text-2);
+    margin: 0;
 }
 
 /* 内容区块样式 */

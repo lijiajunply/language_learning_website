@@ -27,4 +27,7 @@ features:
   - title: 算法学习计划
     details: 拿下蓝桥杯！
     link: /software/algorithm-learning-plan
+  - title: App学习计划
+    details: 写一个App
+    link: /software/app-development-learning-plan
 ---

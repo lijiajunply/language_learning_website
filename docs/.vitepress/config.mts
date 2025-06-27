@@ -37,6 +37,7 @@ export default withMermaid({
           { text: '概要', link: '/software/start' },
           { text: '前端学习计划', link: '/software/front-end-learning-plan' },
           { text: '后端学习计划', link: '/software/backend-learning-plan' },
+          { text: '算法学习计划', link: '/software/algorithm-learning-plan' },
           { text: 'App开发学习计划', link: '/software/app-development-learning-plan' },
           { text: '附录', link: '/software/docker-learn/general-outline' },
         ]
