@@ -301,6 +301,7 @@ export default withMermaid({
                 { text: '算法学习概述', link: '/software/algorithm-learning-plan' },
                 { text: '二分法', link: '/software/algorithm-learning/dichotomy' },
                 { text: '栈与队列', link: '/software/algorithm-learning/stacks-queues' },
+                { text: '哈希表', link: '/software/algorithm-learning/hashtable' },
               ]
             },
             {

@@ -185,6 +185,7 @@ const learningPlans = [
       },
       {
         text: '哈希表',
+        link: '/software/algorithm-learning/hashtable'
       },
     ]
   },
