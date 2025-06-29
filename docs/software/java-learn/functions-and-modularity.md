@@ -64,7 +64,7 @@ public static void modifyValue(int a) {
 public static void main(String[] args) {
     StringBuilder str = new StringBuilder("Hello");
     modifyString(str);
-    System.out.println(str); // 输出 "World"
+    System.out.println(str); // 输出 "Hello World"
 }
 
 public static void modifyString(StringBuilder s) {

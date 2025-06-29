@@ -236,7 +236,6 @@ const learningPlans = [
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 /* 页面标题样式 */
