@@ -178,6 +178,7 @@ const learningPlans = [
     content: [
       {
         text: '链表',
+        link: '/software/algorithm-learning/linked-list'
       },
       {
         text: '队列 & 栈',
