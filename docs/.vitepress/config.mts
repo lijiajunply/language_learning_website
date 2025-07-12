@@ -303,6 +303,7 @@ export default withMermaid({
                 { text: '栈与队列', link: '/software/algorithm-learning/stacks-queues' },
                 { text: '哈希表', link: '/software/algorithm-learning/hashtable' },
                 { text: '链表', link: '/software/algorithm-learning/linked-list' },
+                { text: '动态规划', link: '/software/algorithm-learning/dynamic-programming' },
               ]
             },
             {

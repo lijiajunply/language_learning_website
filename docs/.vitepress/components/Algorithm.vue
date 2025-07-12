@@ -225,6 +225,7 @@ const learningPlans = [
       },
       {
         text: '动态规划',
+        link: '/software/algorithm-learning/dynamic-programming'
       },
     ]
   }

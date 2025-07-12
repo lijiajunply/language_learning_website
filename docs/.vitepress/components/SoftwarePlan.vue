@@ -120,6 +120,27 @@
                     </div>
                 </div>
             </div>
+
+            <!-- App开发 -->
+            <div class="resource-card algorithm-card">
+                <div class="card-header">
+                    <div class="icon-wrapper algorithm-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg>
+                    </div>
+                    <h2>算法学习</h2>
+                </div>
+                <div class="card-content">
+                    <div class="link-group">
+                        <span class="link-label">学习计划和教程：</span>
+                        <a href="/software/algorithm-learning-plan.html" target="_blank" class="resource-link">
+                            查看教程 →
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 提交说明 -->
@@ -262,6 +283,11 @@
 
 .app-icon {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.algorithm-icon {
+    background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);
     color: white;
 }
 
