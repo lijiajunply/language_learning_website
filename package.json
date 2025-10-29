@@ -5,6 +5,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@types/markdown-it-footnote": "^3.0.4",
     "markdown-it-footnote": "^4.0.0",
     "mermaid": "^11.6.0",
     "vitepress": "^1.6.3",

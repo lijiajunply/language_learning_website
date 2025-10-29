@@ -44,7 +44,8 @@ export default withMermaid({
       },
       { text: '硬件部', link: '/hardware/start' },
       { text: '交流实践部', link: '/office/start' },
-      { text: '新媒体部', link: '/new-media/start' }
+      { text: '新媒体部', link: '/new-media/start' },
+      { text: '沙龙', link: '/salon/start' },
     ],
 
     sidebar: {
@@ -171,7 +172,7 @@ export default withMermaid({
                     {
                       text: 'Tailwind 学习',
                       items: [
-                        
+
                       ],
                       collapsed: true,
                     }
@@ -316,7 +317,7 @@ export default withMermaid({
                   items: [
                     { text: 'Flutter 概述', link: '/software/flutter-learn/start' },
                     { text: '一些基本概念', link: '/software/flutter-learn/basic-concepts' },
-                     { text: '项目一 写一个Todo应用', link: '/software/flutter-learn/tutorial-1' },
+                    { text: '项目一 写一个Todo应用', link: '/software/flutter-learn/tutorial-1' },
                   ]
                 },
                 {
@@ -399,6 +400,15 @@ export default withMermaid({
             { text: '新媒体部学习计划', link: '/new-media/start' }
           ]
         }
+      ],
+      '/salon/': [
+        {
+          text: 'iOS Club 沙龙',
+          items: [
+            { text: '概述', link: '/salon/start' },
+            { text: '实用软件分享', link: '/salon/software-sharing' }
+          ]
+        }, all
       ]
     },
 
