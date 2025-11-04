@@ -1,5 +1,7 @@
 # Markdown 学习概要
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 ## 1. 标题
 
 用 `#` 号来创建标题。标题从 `#` 开始。分别对应`<h1>`到`<h6>`

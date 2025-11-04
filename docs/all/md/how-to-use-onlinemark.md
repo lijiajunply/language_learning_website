@@ -1,5 +1,7 @@
 # 社团在线编辑器使用
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 ## 前言
 
 > 在前面的文章中，我们提过Markdown这个语言。

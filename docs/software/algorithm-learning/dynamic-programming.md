@@ -1,5 +1,7 @@
 # 动态规划
 
+**作者：张帅**
+
 动态规划有众多分支，可参考[代码随想录](https://programmercarl.com/动态规划理论基础.html)
 
   动态规划（Dynamic Programming，DP）是运筹学的一个分支，是求解决策过程最优化的过程。
