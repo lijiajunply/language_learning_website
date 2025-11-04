@@ -211,7 +211,13 @@ export default withMermaid({
                     {
                       text: 'EF Core 学习',
                       items: [
-                        { text: '概述', link: '/software/ef-learn/start' }
+                        { text: '概述', link: '/software/ef-learn/start' },
+                        { text: '模型定义与映射', link: '/software/ef-learn/modeling/entity-modeling' },
+                        { text: '查询操作与LINQ', link: '/software/ef-learn/querying/linq-queries' },
+                        { text: '保存数据与事务处理', link: '/software/ef-learn/saving-data/data-persistence' },
+                        { text: '高级特性与性能优化', link: '/software/ef-learn/advanced/advanced-features' },
+                        { text: '数据库迁移与版本管理', link: '/software/ef-learn/migrations/database-migrations' },
+                        { text: '实战示例与最佳实践', link: '/software/ef-learn/practices/practical-examples' }
                       ],
                       collapsed: true,
                     },
