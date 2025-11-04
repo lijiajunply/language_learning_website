@@ -1,5 +1,7 @@
 # 函数
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 > 在上一节我们讲了String的更多用法
 >
 > 这一节我们继续学习

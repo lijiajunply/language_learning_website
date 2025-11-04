@@ -1,5 +1,7 @@
 # 结构体，枚举，类
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 >  在上一节我们学习了函数
 >
 > 这一节我们继续来学习

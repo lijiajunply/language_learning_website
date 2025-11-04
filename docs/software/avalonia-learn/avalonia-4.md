@@ -1,5 +1,7 @@
 # Avalonia（四）MVVM架构实战——文件浏览器
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 ## 前言
 
 在前面，我们介绍了Avalonia基本的结构，以及对普通架构进行了实战练习，那么我们今天就简单对MVVM进行实战。

@@ -1,5 +1,7 @@
 # String的更多用法
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 > 在上一节我们讲到了数组，列表，字典这三种数据结构。
 >
 > 但是你有没有想过，我们之前的有一个东西他很像上面这三个，也属于一种集合

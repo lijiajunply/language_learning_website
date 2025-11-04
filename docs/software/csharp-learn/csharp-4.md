@@ -1,5 +1,7 @@
 # 写点复杂的东西
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 > 在上一节中，我们学习了分支与循环。现在我们可以写一些复杂的东西了
 >
 > 这一节我们继续学习

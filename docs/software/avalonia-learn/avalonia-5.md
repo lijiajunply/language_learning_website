@@ -1,5 +1,7 @@
 # Avalonia（五）使用其他主题来写一个待办事项软件
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 ## 前言
 
 我们之前都是使用Avalonia自带的主题去写，感觉对于新手来说有点难（因为要好看的话得自己去写大量的风格跟自定义主题）。不过Avalonia的社区也有大量优秀的控件主题库。这次我们使用的是FluentAvalonia。

@@ -1,5 +1,7 @@
 # 分支与循环
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 > 在上一节中，我们学习了语句，变量，运算符和表达式，还有算法的优先级
 >
 > 这一节我们继续学习

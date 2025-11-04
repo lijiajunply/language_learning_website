@@ -1,5 +1,7 @@
 # Avalonia（二）简单介绍一下项目
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 # 前言
 
 在上一章中我们主要讲了一下安装与配置，我们这节来简单了解一下Avalonia项目的基本骨架。

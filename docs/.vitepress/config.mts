@@ -353,7 +353,53 @@ export default withMermaid({
                 { text: 'Windows 的 WSL 2 配置', link: '/software/docker-learn/wsl-2-configuration-for-windows' },
               ]
             },
-            { text: '附录 - Git使用', link: '/software/git-learn' }
+            { text: '附录 - Git使用', link: '/software/git-learn' },
+            { text: '附录 - 设计模式', 
+              collapsed: true, 
+              items: [
+                { text: '概述', link: '/software/design-pattern-learn/start' },
+                { 
+                  text: '创建型模式', 
+                  collapsed: true,
+                  items: [
+                    { text: '单例模式', link: '/software/design-pattern-learn/singleton-pattern' },
+                    { text: '工厂方法模式', link: '/software/design-pattern-learn/factory-method-pattern' },
+                    { text: '抽象工厂模式', link: '/software/design-pattern-learn/abstract-factory-pattern' },
+                    { text: '建造者模式', link: '/software/design-pattern-learn/builder-pattern' },
+                    { text: '原型模式', link: '/software/design-pattern-learn/prototype-pattern' },
+                  ]
+                },
+                { 
+                  text: '结构型模式', 
+                  collapsed: true,
+                  items: [
+                    { text: '适配器模式', link: '/software/design-pattern-learn/adapter-pattern' },
+                    { text: '桥接模式', link: '/software/design-pattern-learn/bridge-pattern' },
+                    { text: '组合模式', link: '/software/design-pattern-learn/composite-pattern' },
+                    { text: '装饰器模式', link: '/software/design-pattern-learn/decorator-pattern' },
+                    { text: '外观模式', link: '/software/design-pattern-learn/facade-pattern' },
+                    { text: '享元模式', link: '/software/design-pattern-learn/flyweight-pattern' },
+                    { text: '代理模式', link: '/software/design-pattern-learn/proxy-pattern' },
+                  ]
+                },
+                { 
+                  text: '行为型模式', 
+                  collapsed: true,
+                  items: [
+                    { text: '责任链模式', link: '/software/design-pattern-learn/chain-of-responsibility-pattern' },
+                    { text: '命令模式', link: '/software/design-pattern-learn/command-pattern' },
+                    { text: '解释器模式', link: '/software/design-pattern-learn/interpreter-pattern' },
+                    { text: '迭代器模式', link: '/software/design-pattern-learn/iterator-pattern' },
+                    { text: '中介者模式', link: '/software/design-pattern-learn/mediator-pattern' },
+                    { text: '备忘录模式', link: '/software/design-pattern-learn/memento-pattern' },
+                    { text: '观察者模式', link: '/software/design-pattern-learn/observer-pattern' },
+                    { text: '状态模式', link: '/software/design-pattern-learn/state-pattern' },
+                    { text: '策略模式', link: '/software/design-pattern-learn/strategy-pattern' },
+                    { text: '访问者模式', link: '/software/design-pattern-learn/visitor-pattern' },
+                  ]
+                },
+              ] 
+            }
           ]
         }, all
       ],

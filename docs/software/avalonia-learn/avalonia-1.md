@@ -1,5 +1,7 @@
 # Avalonia 概述
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 ## 简单介绍
 
 Avalonia 是一个跨平台 UI 框架，支持 .NET Core。其通过Skia 渲染引擎来渲染UI，属于自绘框架。

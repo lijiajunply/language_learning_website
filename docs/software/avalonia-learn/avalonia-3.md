@@ -1,5 +1,7 @@
 # Avalonia（三）普通架构实战——计算器
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 # 前言
 
 在上一章中，我们简单的介绍了一下Avalonia的基本架构，那我们这次就用Avalonia的普通结构来进行开发。

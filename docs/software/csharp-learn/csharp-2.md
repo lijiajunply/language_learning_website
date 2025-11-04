@@ -1,5 +1,7 @@
 # C# 基础
 
+**作者：[LuckyFish](https://gitee.com/luckyfishisdashen)**
+
 > 我们在上一节简单的介绍了C#语言，还安装了开发软件，最后我们还简单的看了一下C#的程序
 >
 > 那么这节课我们又要去学习新的内容了
