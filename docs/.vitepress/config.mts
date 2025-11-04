@@ -416,6 +416,7 @@ export default withMermaid({
                     { text: '状态模式', link: '/software/design-pattern-learn/state-pattern' },
                     { text: '策略模式', link: '/software/design-pattern-learn/strategy-pattern' },
                     { text: '访问者模式', link: '/software/design-pattern-learn/visitor-pattern' },
+                    { text: '模板方法模式', link: '/software/design-pattern-learn/template-method-pattern' },
                   ]
                 },
               ]

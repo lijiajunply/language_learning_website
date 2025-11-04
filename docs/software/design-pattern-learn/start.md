@@ -1,5 +1,8 @@
 ## 设计模式学习指南
 
+> [!WARNING]
+> 本附录由AI生成
+
 这个章节，事实上要是开发的项目很多的话，那么也没必要特别系统地看 —— 因为在开发过程中，或多或少的都会用到这些设计模式。但了解设计模式的理论知识，可以帮助我们更好地理解和运用这些模式，提高代码质量和开发效率。
 
 ## 什么是设计模式？
@@ -47,7 +50,7 @@
 - [观察者模式 (Observer Pattern)](observer-pattern.md)
 - [状态模式 (State Pattern)](state-pattern.md)
 - [策略模式 (Strategy Pattern)](strategy-pattern.md)
-- 模板方法模式 (Template Method Pattern)
+- [模板方法模式 (Template Method Pattern)](template-method-pattern.md)
 - [访问者模式 (Visitor Pattern)](visitor-pattern.md)
 
 ## 为什么要学习设计模式？
