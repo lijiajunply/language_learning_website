@@ -300,13 +300,32 @@ export default withMermaid({
               collapsed: true,
               items: [
                 { text: '算法学习概述', link: '/software/algorithm-learning-plan' },
-                { text: '二分法', link: '/software/algorithm-learning/dichotomy' },
-                { text: '栈与队列', link: '/software/algorithm-learning/stacks-queues' },
-                { text: '哈希表', link: '/software/algorithm-learning/hashtable' },
-                { text: '链表', link: '/software/algorithm-learning/linked-list' },
-                { text: '动态规划', link: '/software/algorithm-learning/dynamic-programming' },
-                { text: '二叉树', link: '/software/algorithm-learning/binary-tree' },
-                { text: '递归', link: '/software/algorithm-learning/recursion' },
+                {
+                  text: '基础数据结构',
+                  collapsed: true,
+                  items: [
+                    { text: '栈与队列', link: '/software/algorithm-learning/stacks-queues' },
+                    { text: '哈希表', link: '/software/algorithm-learning/hashtable' },
+                    { text: '链表', link: '/software/algorithm-learning/linked-list' },
+                  ]
+                },
+                {
+                  text: '查找和树',
+                  collapsed: true,
+                  items: [
+                    { text: '二分法', link: '/software/algorithm-learning/dichotomy' },
+                    { text: '二叉树', link: '/software/algorithm-learning/binary-tree' },
+                  ]
+                },
+                {
+                  text: '其他',
+                  collapsed: true,
+                  items: [
+                    { text: '动态规划', link: '/software/algorithm-learning/dynamic-programming' },
+                    { text: '递归', link: '/software/algorithm-learning/recursion' },
+                    { text: '快速幂', link: '/software/algorithm-learning/quick-power' },
+                  ]
+                },
               ]
             },
             {
@@ -354,12 +373,13 @@ export default withMermaid({
               ]
             },
             { text: '附录 - Git使用', link: '/software/git-learn' },
-            { text: '附录 - 设计模式', 
-              collapsed: true, 
+            {
+              text: '附录 - 设计模式',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/software/design-pattern-learn/start' },
-                { 
-                  text: '创建型模式', 
+                {
+                  text: '创建型模式',
                   collapsed: true,
                   items: [
                     { text: '单例模式', link: '/software/design-pattern-learn/singleton-pattern' },
@@ -369,8 +389,8 @@ export default withMermaid({
                     { text: '原型模式', link: '/software/design-pattern-learn/prototype-pattern' },
                   ]
                 },
-                { 
-                  text: '结构型模式', 
+                {
+                  text: '结构型模式',
                   collapsed: true,
                   items: [
                     { text: '适配器模式', link: '/software/design-pattern-learn/adapter-pattern' },
@@ -382,8 +402,8 @@ export default withMermaid({
                     { text: '代理模式', link: '/software/design-pattern-learn/proxy-pattern' },
                   ]
                 },
-                { 
-                  text: '行为型模式', 
+                {
+                  text: '行为型模式',
                   collapsed: true,
                   items: [
                     { text: '责任链模式', link: '/software/design-pattern-learn/chain-of-responsibility-pattern' },
@@ -398,7 +418,7 @@ export default withMermaid({
                     { text: '访问者模式', link: '/software/design-pattern-learn/visitor-pattern' },
                   ]
                 },
-              ] 
+              ]
             }
           ]
         }, all
