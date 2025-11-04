@@ -202,6 +202,7 @@ const learningPlans = [
       },
       {
         text: '二叉树',
+        link: '/software/algorithm-learning/binary-tree'
       },
       {
         text: '二叉搜索树'
@@ -222,6 +223,7 @@ const learningPlans = [
       },
       {
         text: '递归',
+        link: '/software/algorithm-learning/recursion'
       },
       {
         text: '动态规划',

@@ -305,6 +305,8 @@ export default withMermaid({
                 { text: '哈希表', link: '/software/algorithm-learning/hashtable' },
                 { text: '链表', link: '/software/algorithm-learning/linked-list' },
                 { text: '动态规划', link: '/software/algorithm-learning/dynamic-programming' },
+                { text: '二叉树', link: '/software/algorithm-learning/binary-tree' },
+                { text: '递归', link: '/software/algorithm-learning/recursion' },
               ]
             },
             {
