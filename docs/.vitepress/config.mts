@@ -42,7 +42,12 @@ export default withMermaid({
           { text: '附录', link: '/software/docker-learn/general-outline' },
         ]
       },
-      { text: '硬件部', link: '/hardware/start' },
+      {
+        text: '硬件部', items: [
+          { text: '概要', link: '/hardware/start' },
+          { text: 'SolidWorks', link: '/hardware/solidworks/sw-1' },
+        ]
+      },
       { text: '交流实践部', link: '/office/start' },
       { text: '新媒体部', link: '/new-media/start' },
       { text: '沙龙', link: '/salon/start' },
@@ -435,6 +440,11 @@ export default withMermaid({
           text: '硬件部学习计划',
           items: [
             { text: '概述', link: '/hardware/start' },
+            {
+              text: 'SolidWorks', items: [
+                { text: 'SolidWorks核心能力突破', link: '/hardware/solidworks/sw-1.md' },
+              ], collapsed: true,
+            }
           ]
         }, all
       ],
@@ -481,7 +491,8 @@ export default withMermaid({
           text: 'iOS Club 沙龙',
           items: [
             { text: '概述', link: '/salon/start' },
-            { text: '实用软件分享', link: '/salon/software-sharing' }
+            { text: '实用软件分享', link: '/salon/software-sharing' },
+            { text: 'Solidworks 分享', link: '/salon/solidworks-sharing' }
           ]
         }, all
       ]

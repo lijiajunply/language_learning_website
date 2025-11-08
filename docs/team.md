@@ -41,6 +41,11 @@ const members = [
     avatar: '/ios_logo.jpg',
     name: '妖陌',
     title: 'Creator',
+  },
+  {
+    avatar: '/ios_logo.jpg',
+    name: '喔喔',
+    title: 'Creator',
   }
 ]
 </script>
