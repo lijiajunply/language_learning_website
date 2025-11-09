@@ -335,6 +335,8 @@ export default withMermaid({
                     { text: '动态规划', link: '/software/algorithm-learning/dynamic-programming' },
                     { text: '递归', link: '/software/algorithm-learning/recursion' },
                     { text: '快速幂', link: '/software/algorithm-learning/quick-power' },
+                    { text: '滑动窗口', link: '/software/algorithm-learning/sliding-window' },
+                    { text: '线性基', link: '/software/algorithm-learning/linear-basis' },
                   ]
                 },
               ]
