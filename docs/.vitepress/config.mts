@@ -311,6 +311,7 @@ export default withMermaid({
               collapsed: true,
               items: [
                 { text: '算法学习概述', link: '/software/algorithm-learning-plan' },
+                { text: '前置内容', link: '/software/algorithm-learning/prerequisites' },
                 {
                   text: '基础数据结构',
                   collapsed: true,

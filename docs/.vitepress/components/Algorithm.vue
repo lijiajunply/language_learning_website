@@ -177,6 +177,10 @@ const learningPlans = [
     text: '基础数据结构',
     content: [
       {
+        text: '前置内容',
+        link: '/software/algorithm-learning/prerequisites'
+      },
+      {
         text: '链表',
         link: '/software/algorithm-learning/linked-list'
       },
