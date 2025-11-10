@@ -216,7 +216,11 @@ const learningPlans = [
       },
       {
         text: 'N 叉树'
-      }
+      },
+      {
+        text: '双指针',
+        link: '/software/algorithm-learning/two-pointers'
+      },
     ]
   },
   {
@@ -244,6 +248,10 @@ const learningPlans = [
       {
         text: '线性基',
         link: '/software/algorithm-learning/linear-basis'
+      },
+      {
+        text: '贪心',
+        link: '/software/algorithm-learning/greedy'
       },
     ]
   }

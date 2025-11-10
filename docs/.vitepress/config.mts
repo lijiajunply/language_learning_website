@@ -327,6 +327,7 @@ export default withMermaid({
                   items: [
                     { text: '二分法', link: '/software/algorithm-learning/dichotomy' },
                     { text: '二叉树', link: '/software/algorithm-learning/binary-tree' },
+                    { text: '双指针', link: '/software/algorithm-learning/two-pointers' },
                   ]
                 },
                 {
@@ -338,6 +339,7 @@ export default withMermaid({
                     { text: '快速幂', link: '/software/algorithm-learning/quick-power' },
                     { text: '滑动窗口', link: '/software/algorithm-learning/sliding-window' },
                     { text: '线性基', link: '/software/algorithm-learning/linear-basis' },
+                    { text: '贪心', link: '/software/algorithm-learning/greedy' },
                   ]
                 },
               ]
