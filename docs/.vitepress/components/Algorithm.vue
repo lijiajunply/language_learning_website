@@ -192,6 +192,14 @@ const learningPlans = [
         text: '哈希表',
         link: '/software/algorithm-learning/hashtable'
       },
+      {
+        text: '单调栈',
+        link: '/software/algorithm-learning/monotonic-stack'
+      },
+      {
+        text: '单调队列',
+        link: '/software/algorithm-learning/monotonic-queue'
+      },
     ]
   },
   {
@@ -252,6 +260,10 @@ const learningPlans = [
       {
         text: '贪心',
         link: '/software/algorithm-learning/greedy'
+      },
+      {
+        text: '最小公倍数 最大公约数',
+        link: '/software/algorithm-learning/greatest-common-divisor'
       },
     ]
   }

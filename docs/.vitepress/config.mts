@@ -319,6 +319,8 @@ export default withMermaid({
                     { text: '栈与队列', link: '/software/algorithm-learning/stacks-queues' },
                     { text: '哈希表', link: '/software/algorithm-learning/hashtable' },
                     { text: '链表', link: '/software/algorithm-learning/linked-list' },
+                    { text: '单调栈', link: '/software/algorithm-learning/monotonic-stack' },
+                    { text: '单调队列', link: '/software/algorithm-learning/monotonic-queue' },
                   ]
                 },
                 {
@@ -340,6 +342,7 @@ export default withMermaid({
                     { text: '滑动窗口', link: '/software/algorithm-learning/sliding-window' },
                     { text: '线性基', link: '/software/algorithm-learning/linear-basis' },
                     { text: '贪心', link: '/software/algorithm-learning/greedy' },
+                    { text: '最小公倍数 最大公约数', link: '/software/algorithm-learning/greatest-common-divisor' },
                   ]
                 },
               ]
