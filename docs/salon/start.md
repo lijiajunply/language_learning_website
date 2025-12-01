@@ -21,6 +21,7 @@ title: iOS Club 技术沙龙
 | [实用软件分享](software-sharing.md) | 张帅 | 2025 年 10 月 30 日 |
 | [三维建模软件概览与Solidworks入门实战](solidworks-sharing.md) | 牛恒轩 | 2025 年 11 月 5 日 |
 | [从零开始：新电脑验机与高效使用指南](efficient-user-guide.md) | 离秋 | 2025 年 11 月 12 日 |
+| [AI 重塑学习与备考体验](ai.md) | LuckyFish | 2025 年 11 月 20 日 |
 
 ## 未来计划中的沙龙主题
 

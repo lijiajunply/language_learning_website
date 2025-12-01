@@ -501,7 +501,8 @@ export default withMermaid({
             { text: '概述', link: '/salon/start' },
             { text: '实用软件分享', link: '/salon/software-sharing' },
             { text: 'Solidworks 分享', link: '/salon/solidworks-sharing' },
-            { text: '新电脑验机与高效使用指南', link: '/salon/efficient-user-guide' }
+            { text: '新电脑验机与高效使用指南', link: '/salon/efficient-user-guide' },
+            { text: 'AI 重塑学习与备考体验', link: '/salon/ai' },
           ]
         }, all
       ]
