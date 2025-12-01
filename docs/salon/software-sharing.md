@@ -4,7 +4,10 @@ author: 张帅
 
 # 实用软件分享
 
-**主讲人：张帅**
+> [!tip]
+> 主讲人：张帅
+> 
+> 日期：2025 年 10 月 30 日
 
 ## 1. Visual Studio Code (Vscode)
 
